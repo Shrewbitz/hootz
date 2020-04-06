@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
 
   
 
@@ -6,10 +6,9 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             log_in!(@user)
-            redirect_to users_url #fix_me
+            render "api/users/"
         else
-            flash[:errors] = ["Password is too short (minimum is 7 characters)"]
-            render :new #fix_me
+            render json: @user.errors.full_messages, status: 499
         end
     end
 
