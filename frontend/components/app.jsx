@@ -4,6 +4,7 @@ import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 import SignupContainer from './session/signup_container'
 import Main from './main/main'
 import NavContainer from './nav/nav_container'
+import {AuthRoute} from '../util/route_utils'
 
 
 const App = () => (
@@ -11,7 +12,7 @@ const App = () => (
         hello
         <Route path="/" component={NavContainer}/>
         <Route exact path="/" component={Main}/>
-        <Route path="/signup" component={SignupContainer}/>
+        <AuthRoute path="/signup" component={SignupContainer}/>
     </div>
 )
 
