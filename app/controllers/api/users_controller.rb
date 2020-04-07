@@ -1,8 +1,9 @@
 class Api::UsersController < ApplicationController
 
-  
+  require 'byebug'
 
     def create 
+        debugger
         @user = User.new(user_params)
         if @user.save
             log_in!(@user)
@@ -15,7 +16,7 @@ class Api::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:email, :password)
+        params.require(:user).permit(:email, :password, :first_name, :last_name)
     end
 
 end
