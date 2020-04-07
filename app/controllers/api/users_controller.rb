@@ -3,11 +3,10 @@ class Api::UsersController < ApplicationController
   require 'byebug'
 
     def create 
-        debugger
         @user = User.new(user_params)
         if @user.save
             log_in!(@user)
-            render "api/users/"
+            render "api/users/show"
         else
             render json: @user.errors.full_messages, status: 499
         end

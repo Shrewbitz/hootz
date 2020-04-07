@@ -1,19 +1,20 @@
 class Api::SessionsController < ApplicationController
     def create
-        @user = User.find_by_credentials(params[:user][:email],params[:user][:email])
+        @user = User.find_by_credentials(params[:user][:email],params[:user][:password])
         if @user
             log_in!(@user)
-            redirect_to users_url
+            render "api/users/show"
         else
-            flash[:errors] = ['Invalid email or password'] #fix_me
-            render :new
+            render json: ["Incorrect credentials"], status: 498
         end
     end
 
     def destroy
-        if logged_in?
+        @user = current_user
+        if @user
             log_out!
+            render "api/users/show"
         end
-        redirect_to new_session_url #fix_me
+        render json: ["Nobody signed in"], status: 497 #fix_me
     end
 end
