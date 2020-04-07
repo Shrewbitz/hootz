@@ -2,7 +2,7 @@ import {RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER} from '../actions/session_acti
 
 const _nullUser = Object.freeze({id: null})
 
-const sessionReducer = (state = _nullUser, action) => { 
+export default (state = _nullUser, action) => { 
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_CURRENT_USER:
@@ -13,5 +13,3 @@ const sessionReducer = (state = _nullUser, action) => {
             return state;
     }
 }
-
-export default sessionReducer;

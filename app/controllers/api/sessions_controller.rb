@@ -15,6 +15,5 @@ class Api::SessionsController < ApplicationController
             log_out!
             render "api/users/show"
         end
-        render json: ["Nobody signed in"], status: 497 #fix_me
     end
 end
