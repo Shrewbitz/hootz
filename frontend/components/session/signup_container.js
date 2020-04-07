@@ -7,7 +7,4 @@ const mdp = dispatch => ({
 });
 
 
-
-// const msp
-
 export default connect(null, mdp)(Signup)
