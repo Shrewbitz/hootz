@@ -1,6 +1,5 @@
 class Api::UsersController < ApplicationController
 
-  require 'byebug'
 
     def create 
         @user = User.new(user_params)
