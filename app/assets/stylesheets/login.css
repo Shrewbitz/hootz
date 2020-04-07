@@ -1,0 +1,36 @@
+.login-header {
+    color: #d32323;
+    display: flex;
+    justify-content: center;
+}
+
+.loginForm form label {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.loginForm form button {
+    display: flex;
+    justify-content: center;
+  
+}
+
+
+.login-submit {
+    color: white;
+    background-color: #d32323;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #d32323;
+    padding: 10px 13px;
+    font-size: 16px;
+}
+
+.loginForm form label input {
+    width: 200px;
+    border-radius: 3px;
+    padding: 5px 9px;
+    font-size: 14px;
+}

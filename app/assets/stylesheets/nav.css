@@ -1,0 +1,35 @@
+.nav-bar {
+    background-color: #d32323;
+}
+
+.main-signup-login {
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    color: white;
+    text-decoration: none;
+}
+
+.main-login {
+    color: white;
+    text-decoration: none;
+    padding: 7px 24px 8px;
+    font-weight: 700;
+}
+
+.main-signup {
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid white;
+    padding: 7px 24px 8px;
+    font-weight: 700;
+}
+
+
+.hootz {
+    display: flex;
+    justify-content: center;
+    text-decoration: white;
+    text-shadow: white 2px 2px 1px;
+}

@@ -10,7 +10,6 @@ import {AuthRoute} from '../util/route_utils'
 
 const App = () => (
     <div>
-        hello
         <Route path="/" component={NavContainer}/>
         <Route exact path="/" component={Main}/>
         <AuthRoute path="/login" component={LoginContainer}/>
