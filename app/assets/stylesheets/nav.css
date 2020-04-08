@@ -37,5 +37,25 @@
     -2px  2px     #fff, 
      2px -2px     #fff, 
     -2px -2px     #fff;
+    margin: 0px;
     
+}
+
+.diner-pic-container {
+    border: solid lime 5px;
+    height: 600px;
+    /* width: 100%; */
+    object-fit: cover;
+}
+
+.diner-pic {
+    /* padding-top: 100px; */
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.empty-placeholder {
+    height: 1000px;
+    width: 100%;
 }

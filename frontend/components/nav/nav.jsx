@@ -15,11 +15,17 @@ export default ({currentUser, logout})=> {
     );
 
     return (
+        <>
         <header className="nav-bar">
             <h1 className="hootz">hootz</h1>
             <div>
                 {display}
             </div>
+            <div className="diner-pic-container">
+            <img  className="diner-pic" src={window.diner}/>
+            </div>
         </header>
+            <div className="empty-placeholder"></div>
+        </>    
     );
 };

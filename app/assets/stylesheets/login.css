@@ -12,10 +12,16 @@
     justify-content: center;
 }
 
+.signupForm {
+    height: 675px; 
+    display: flex;
+    justify-content: center;
+}
+
 .loginbox {
     width: 300px;
+    padding-top: 100px;
     margin: 50px;
-    /* display: block; */
 }
 
 .loginForm form {
@@ -28,6 +34,8 @@
     justify-content: center;
     align-content: center; 
 }
+
+
 
 
 .login-submit {
@@ -50,9 +58,32 @@
     border: solid 1px #999;
 }
 
+.signupForm form label input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px 9px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    border: solid 1px #999;
+}
+
+.signupForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signupForm form label {
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+}
+
+
+
 .login-pic {
-    margin-top: 130px;
-    margin-left: 100px;
+    /* margin-top: 130px;
+    margin-left: 100px; */
+    object-fit: contain;
 }
 
 .local {
@@ -74,5 +105,8 @@
 }
 
 .sign-container {
+    margin-top: 200px;
+    margin-left: 100px;
     display: flex;
+    
 }

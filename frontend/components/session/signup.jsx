@@ -7,7 +7,8 @@ class Signup extends React.Component {
             email: '',
             password: '',
             first_name: '',
-            last_name: ''
+            last_name: '',
+            zipcode: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     };
@@ -26,7 +27,7 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div className="loginForm">
+            <div className="signupForm">
                 <div className="loginbox">
                 <h2 className="login-header">Sign Up</h2>
                 <p className="local" >Connect with great local restaurants </p>
@@ -44,7 +45,7 @@ class Signup extends React.Component {
                         <input type="password" placeholder="Password" value={this.state.password} onChange={this.handleInput('password')}/>
                     </label>
                     <label>
-                        <input type="text" placeholder="ZIP code"/>
+                        <input type="text" placeholder="ZIP code" value={this.state.zipcode} onChange={this.handleInput('zipcode')}/>
                     </label>
                     <label>
                         <button className="login-submit" onClick={this.handleSubmit}>Sign Up</button>

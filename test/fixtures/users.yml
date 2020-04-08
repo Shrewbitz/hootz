@@ -6,6 +6,7 @@ one:
   email: MyString
   password_digest: MyString
   session_token: MyString
+  zipcode: MyString
 
 two:
   first_name: MyString
@@ -13,3 +14,4 @@ two:
   email: MyString
   password_digest: MyString
   session_token: MyString
+  zipcode: MyString

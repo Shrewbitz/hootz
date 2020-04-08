@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript">
+      window.diner = "<%= image_url('diner.jpg') %>"
       window.sign = "<%= image_url('signup_illustration.png') %>"
     </script>
     <% if current_user  %>
@@ -15,7 +16,8 @@
       window.currentUser = {
         "id": <%= current_user.id  %>,
         "first_name": "<%= current_user.first_name %>",
-        "last_name": "<%= current_user.last_name %>"
+        "last_name": "<%= current_user.last_name %>",
+        "zipcode": "<%= current_user.zipcode %>"
       };
       </script>
     <% end %>
