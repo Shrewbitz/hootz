@@ -17,6 +17,11 @@ export default ({currentUser, logout})=> {
     return (
         <>
         <header className="nav-bar">
+            <div className="gray-top">
+                <i className="fas fa-suitcase fa-xs"></i>
+                <a className="gray-top-text" href="https://github.com/Shrewbitz/hoot/wiki">Go to the hootz GitHub</a>
+            </div>
+            <div className="nav-top"></div>
             <h1 className="hootz">hootz</h1>
             <div>
                 {display}

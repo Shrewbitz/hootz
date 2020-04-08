@@ -59,3 +59,25 @@
     height: 1000px;
     width: 100%;
 }
+
+.nav-top {
+    height: 64px;
+    background-color: white;
+}
+
+.gray-top {
+    height: 21px;
+    padding: 0px 0px 6px 0px;
+    background-color: #666;
+    color: white;
+    font-size: 12;
+    text-align: center;
+}
+
+.gray-top-text {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.28571em;
+}
