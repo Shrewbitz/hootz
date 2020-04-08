@@ -64,7 +64,7 @@ export default () => (
             <div className="footer-city-list">
                 <ul>
                     <li className="footer-site-map">Site Map</li>
-                    <li className="footer-city">Atlanta</li>
+                    <li className="footer-atl">Atlanta</li>
                     <li className="footer-city">Austin</li>
                     <li className="footer-city">Boston</li>
                     <li className="footer-city">Chicago</li>
