@@ -1,0 +1,21 @@
+.signup-header {
+    width: 1445px;
+    height: 40px;
+    padding: 12px 0px;
+    background-color: #d32323;
+}
+
+.hoot {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow:    
+     2px  2px     #fff, 
+    -2px  2px     #fff, 
+     2px -2px     #fff, 
+    -2px -2px     #fff;
+    margin: 0px;
+}

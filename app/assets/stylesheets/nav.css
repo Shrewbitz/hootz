@@ -1,4 +1,5 @@
 .nav-bar {
+    width: 100%;
     background-color: #d32323;
 }
 
@@ -31,5 +32,10 @@
     display: flex;
     justify-content: center;
     text-decoration: white;
-    text-shadow: white 2px 2px 1px;
+    text-shadow:    
+     2px  2px     #fff, 
+    -2px  2px     #fff, 
+     2px -2px     #fff, 
+    -2px -2px     #fff;
+    
 }

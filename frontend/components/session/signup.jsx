@@ -26,23 +26,34 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div className="signupForm">
-                <h2>Sign Up</h2>
+            <div className="loginForm">
+                <div className="loginbox">
+                <h2 className="login-header">Sign Up</h2>
+                <p className="local" >Connect with great local restaurants </p>
+                <p className="terms">By continuing, you agree to hootz terms of service and acknowledge hootz privacy policy.</p>
                 <form>
-                    <label>email
-                        <input type="text" value={this.state.email} onChange={this.handleInput('email')}/>
+                    <label>
+                        <input type="text" placeholder="First Name" value={this.state.first_name} onChange={this.handleInput('first_name')}/>
+                        <div className="spacer"></div>
+                        <input type="text" placeholder="Last Name" value={this.state.last_name} onChange={this.handleInput('last_name')}/>
                     </label>
-                    <label>password
-                        <input type="password" value={this.state.password} onChange={this.handleInput('password')}/>
+                    <label>
+                        <input type="text" placeholder="Email" value={this.state.email} onChange={this.handleInput('email')}/>
                     </label>
-                    <label>first name
-                        <input type="text" value={this.state.first_name} onChange={this.handleInput('first_name')}/>
+                    <label>
+                        <input type="password" placeholder="Password" value={this.state.password} onChange={this.handleInput('password')}/>
                     </label>
-                    <label>last name
-                        <input type="text" value={this.state.last_name} onChange={this.handleInput('last_name')}/>
+                    <label>
+                        <input type="text" placeholder="ZIP code"/>
                     </label>
-                    <button onClick={this.handleSubmit}>Sign Up</button>
+                    <label>
+                        <button className="login-submit" onClick={this.handleSubmit}>Sign Up</button>
+                    </label>
                 </form>
+                </div>
+                <div className="sign-container">
+                    <img className="login-pic" src={window.sign}/>
+                </div>
             </div>
         )
     };
