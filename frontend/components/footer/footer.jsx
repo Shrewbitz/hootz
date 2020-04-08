@@ -14,7 +14,7 @@ export default () => (
                     <li>Terms of Service</li>
                     <li>Privacy Policy</li>
                     <li>Ad Choices</li>
-                    <li>This site is pro....</li>
+                    <li>This site is not protected by reCAPTCHA - See additional Privacy Policy and Terms</li>
                 </ul>
             </div>
             <div className="footer-block">
@@ -88,7 +88,12 @@ export default () => (
                     <li className="footer-city">More Cities</li>
                 </ul>
             </div>
-            <div className="footer-pic">footer pic</div>
+            <div className="footer-pic">
+                <img src={window.city}/>
+            </div>
+            <div className='footer-thanks'>
+                Thank you for giving a hoot about my website.
+            </div>
         </div>
     </div>
 )
