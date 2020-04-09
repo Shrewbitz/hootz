@@ -10,7 +10,19 @@ class Login extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.manualLogin = this.manualLogin.bind(this)
     };
+    
+    manualLogin(e) {
+        e.preventDefault();
+        this.state = {
+            email: "demo_user@gmail.com",
+            password: "password"
+        }
+        this.props.login(this.state)
+        .then(() => this.props.history.push('/'));
+    };
+
 
     handleInput(type) {
         return(e) => {
@@ -28,12 +40,12 @@ class Login extends React.Component {
         return (
             <div className="loginForm">
                 <div className="loginbox">
-                    <h2 className="login-header">Log In to hootz</h2>
+                    <h2 className="login-head">Log In to Hootz</h2>
                     <div className="login-to-signup">
-                        <div>New to hootz?</div>
+                        <div>New to Hootz?</div>
                         <Link className="signup-link" to="/signup">Sign Up</Link>
                     </div>
-                    <button className="demo-user-button"> 
+                    <button className="demo-user-button" onClick={this.manualLogin}> 
                         <i className="fas fa-sign-in-alt "></i>
                          Sign in with a demo user
                     </button>
@@ -54,7 +66,7 @@ class Login extends React.Component {
                         </label>
                     </form>
                     <div className="login-to-signup-mini">
-                        <div>New to hootz?</div>
+                        <div>New to Hootz?</div>
                         <Link className="signup-link" to="/signup">Sign Up</Link>
                     </div>
                 </div>
