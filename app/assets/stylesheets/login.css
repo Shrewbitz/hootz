@@ -2,26 +2,104 @@
     color: #d32323;
     display: flex;
     justify-content: center;
-    font-size: 22;
+    font-size: 22px;
     font-weight: bold;
+    margin: 114px 0 0 0;
+    padding-bottom: 6px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .loginForm {
     display: flex;
     justify-content: center;
+    padding: 15px 0 36px 0;
+}
+
+.loginbox {
+    width: 300px;
+    padding: 30px;
+    margin: 0 44.5px 0 10.5px;
+    height: 679px;
+}
+
+.login-to-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    padding: 0 0 12px 0;
+}
+
+.demo-user-button {
+    background-color: #3b5998;
+    padding: 6px 18px 4px 5px;
+    width: 300px;
+    height: 36px;
+    border: solid #3b5998 1px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.demo-user-button:hover {
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.demo-user-button i {
+    padding-right: 10px;
+}
+
+.signup-divider {
+    text-align: center;
+    margin: 24px 0px 24px 0px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.divider-or {
+    margin: 0 15px;
+}
+
+.divider-line {
+    width: 124px;
+    font-size: 14px;
+    line-height: 7px;
+    margin-bottom: 7px;
+    border-bottom: solid #ccc 1px;
+}
+
+.login-to-signup-mini {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: #999;
+    padding: 12px 0 0 0;
+    
+}
+
+.signup-link {
+    padding-left: 3px;
+    color: #0073bb;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .signupForm {
     height: 675px; 
     display: flex;
     justify-content: center;
-}
-
-.loginbox {
-    width: 300px;
-    padding-top: 100px;
-    margin: 50px;
 }
 
 .loginForm form {
@@ -47,6 +125,13 @@
     border: solid 1px #d32323;
     padding: 10px 13px;
     font-size: 16px;
+    font-weight: bold;
+}
+
+.login-submit:hover {
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    opacity: 85%;
 }
 
 .loginForm form label input {
@@ -81,8 +166,7 @@
 
 
 .login-pic {
-    /* margin-top: 130px;
-    margin-left: 100px; */
+     margin-top: 117px;
     object-fit: contain;
 }
 
@@ -105,8 +189,8 @@
 }
 
 .sign-container {
-    margin-top: 200px;
-    margin-left: 100px;
+    height: 459px;
+    margin-left: 83px;
     display: flex;
     
 }
