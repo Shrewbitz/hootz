@@ -16,18 +16,33 @@ export default ({currentUser, logout})=> {
 
     return (
         <>
+        <div className="gray-top">
+            <i className="fas fa-suitcase fa-xs"></i>
+            <a className="gray-top-text" href="https://github.com/Shrewbitz/hoot/wiki">Go to the hootz GitHub</a>
+        </div>
         <header className="nav-bar">
-            <div className="gray-top">
-                <i className="fas fa-suitcase fa-xs"></i>
-                <a className="gray-top-text" href="https://github.com/Shrewbitz/hoot/wiki">Go to the hootz GitHub</a>
+            <div className="nav-top">
+                <div className="nav-bar-upper">
+                    <div className="nav-buffer">
+                        <div className="nav-bar-upleft">
+                            Write a review
+                        </div>
+                    </div>
+                    <div className="nav-bar-upright">
+                        {display}
+                    </div>
+                </div>
             </div>
-            <div className="nav-top"></div>
-            <h1 className="hootz">hootz</h1>
-            <div>
-                {display}
-            </div>
-            <div className="diner-pic-container">
-            <img  className="diner-pic" src={window.diner}/>
+            <div className="nav-bottom">
+                <h1 className="hootz">hootz</h1>
+                <form className="nav-search">
+                    <div className="psuedo-rest">Find</div>
+                    <input className="searchbar-rest" type="search"  placeholder="Restaurants"/>
+                    <div className="searchborder"></div>
+                    <div className="psuedo-loc">Near</div>
+                    <input className="searchbar-loc"type="search"  placeholder="location"/>
+                    <button><i className="fas fa-search fa-lg"></i></button>
+                </form>
             </div>
         </header>
             <div className="empty-placeholder"></div>
