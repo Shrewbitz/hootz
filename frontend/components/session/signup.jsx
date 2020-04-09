@@ -48,6 +48,20 @@ class Signup extends React.Component {
                         <input type="text" placeholder="ZIP code" value={this.state.zipcode} onChange={this.handleInput('zipcode')}/>
                     </label>
                     <label>
+                    <div className="local" >Birthdate</div>
+                    <div className="spacer"></div>
+                    <div className="terms">Optional</div>
+                    </label>
+                    <label>
+                        <input type="date" name="" id=""/>
+                        {/* <input type="text" placeholder="Month" />
+                        <div className="spacer"></div>
+                        <input type="text" placeholder="Day" />
+                        <div className="spacer"></div>
+                        <input type="text" placeholder="Year" />
+                        <select name="" id=""></select> */}
+                    </label>
+                    <label>
                         <button className="login-submit" onClick={this.handleSubmit}>Sign Up</button>
                     </label>
                 </form>

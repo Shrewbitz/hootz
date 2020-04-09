@@ -66,6 +66,8 @@
     text-decoration: none;
     padding: 7px 24px 8px;
     font-weight: 700;
+    background-color: transparent;
+    border: none;
 }
 
 .main-signup {
