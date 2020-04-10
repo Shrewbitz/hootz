@@ -18,7 +18,7 @@ export default ({currentUser, logout})=> {
         <>
         <div className="gray-top">
             <i className="fas fa-suitcase fa-xs"></i>
-            <a className="gray-top-text" href="https://github.com/Shrewbitz/hoot/wiki">Go to the hootz GitHub</a>
+            <a className="gray-top-text" href="https://github.com/Shrewbitz/hoot/wiki">Go to the Hootz GitHub</a>
         </div>
         <header className="nav-bar">
             <div className="nav-top">
@@ -34,7 +34,8 @@ export default ({currentUser, logout})=> {
                 </div>
             </div>
             <div className="nav-bottom">
-                <h1 className="hootz">hootz</h1>
+                <h1 className="hootz"><img src={window.hootz}/></h1>
+                
                 <form className="nav-search">
                     <div className="psuedo-rest">Find</div>
                     <input className="searchbar-rest" type="search"  placeholder="Restaurants"/>

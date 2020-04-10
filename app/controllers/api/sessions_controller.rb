@@ -4,9 +4,16 @@ class Api::SessionsController < ApplicationController
         if @user
             log_in!(@user)
             render "api/users/show"
-        else
-            render json: ["Incorrect credentials"], status: 498
+        elsif params[:user][:email].length < 1
+            render json: ["Please fill out this field", 2], status: 402
+        elsif !params[:user][:email].include?("@")
+            render json: ["please include an '@' in the email address.", 2], status: 403
+        elsif params[:user][:password].length < 1
+            render json: ["Please fill out this field", 3], status: 401
+        else 
+            render json: ["The email address or password you entered is incorrect.", 7], status: 401
         end
+       
     end
 
     def destroy
@@ -17,3 +24,8 @@ class Api::SessionsController < ApplicationController
         end
     end
 end
+
+
+#login The email address or password you entered is incorrect.
+#please include an '@' in the email address. 'a' is missing an @
+#password bubble = please fill out this field
