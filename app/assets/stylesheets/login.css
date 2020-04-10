@@ -67,6 +67,8 @@
 }
 
 .firstClassTriangle {
+    /* opacity: 0; 
+    transition: opacity 3s;  */
     position: relative;
     width: 185px;
     /* border: solid green 1px; */
