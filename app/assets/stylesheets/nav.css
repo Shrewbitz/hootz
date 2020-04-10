@@ -44,7 +44,7 @@
     width: 960px;
     color: white;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700git ;
 }
 
 .nav-bar-upleft {
@@ -87,6 +87,7 @@
     border: none;
     border-bottom: solid transparent 2px;
     padding: 9px 12px 8px 12px;
+    font-size: 14px;
 }
 
 .main-login:hover {
