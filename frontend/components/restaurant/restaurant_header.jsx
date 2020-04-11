@@ -19,20 +19,25 @@ export default ({currentUser, logout})=> {
         {/* <div>{this.state.restaurant.name}</div> */}
 
         <div className="restaurant-head-container">
-                <div className="restaurant-logo-container"><img className="hootz-pic" src={window.hootz2}/></div>
             <div className="restaurant-top-container">
+                <div className="restaurant-left-margin">
+                    <Link className="restaurant-logo-container" to="/"><img className="restaurant-logo" src={window.hootz}/></Link>
+                </div>
                 <div className="restaurant-mid-head-container">
                     <div className="restaurant-search">
                             <form className="restaurant-nav-search">
-                                <input className="restaurant-searchbar-rest" type="search"  placeholder="Restaurants"/>
+                                <input className="restaurant-searchbar-rest" type="search"  placeholder="  Restaurants"/>
                                 <div className="restaurant-searchborder"></div>
+                                {/* <div className="searchborder"></div> */}
                                 <input className="restaurant-searchbar-loc"type="search"  placeholder="Location"/>
                                 <button><i className="fas fa-search fa-lg"></i></button>
                             </form>
                     </div>
-                    <div className="restaurant-top-link">Write a Review</div>
-                    <div className="restaurant-signup-login">{display}</div>
                 </div>
+                    <div className="restaurant-right-container">
+                        <div className="restaurant-top-link">Write a Review</div>
+                        <div className="restaurant-signup-login">{display}</div>
+                    </div>
             </div>
         </div>
 

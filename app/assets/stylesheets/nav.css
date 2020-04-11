@@ -182,7 +182,20 @@
 }
 
 .nav-search button:active {
-    transition: background-color 0.0s ease;
     background-color: #8d0005;
 
+}
+
+
+.empty-placeholder {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px;
+    background-color: #d32323;
 }

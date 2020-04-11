@@ -46,7 +46,14 @@ export default ({currentUser, logout})=> {
                 </form>
             </div>
         </header>
-            <div className="empty-placeholder"></div>
+            <div className="empty-placeholder">
+                <Link className="link" to="/restaurants/1">  Ippudo NY </Link>
+                <Link className="link" to="/restaurants/2">  Popeyes Louisiana Kitchen  </Link>
+                <Link className="link" to="/restaurants/3">  DORADO Tacos {"&"} Quesadillas </Link>
+                <Link className="link" to="/restaurants/4">  Joe's Pizza </Link>
+                <Link className="link" to="/restaurants/5">  Taco Bell </Link>
+            
+            </div>
         </>    
     );
 };
