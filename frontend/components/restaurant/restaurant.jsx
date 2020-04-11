@@ -10,6 +10,7 @@ class Restaurant extends React.Component {
     };
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchRestaurant(this.props.match.params.restaurantId).then(restaurant => {
             this.setState({restaurant: restaurant.restaurant})
         });
@@ -32,7 +33,6 @@ class Restaurant extends React.Component {
         (rating >= 1.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
         <div><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> );
 
-        
 
 
         
@@ -75,10 +75,20 @@ class Restaurant extends React.Component {
                         <div className="r-about">{this.state.restaurant.about}</div>
                         <div className="r-breakline"></div> 
                         <div className="r-section-label">Reviews</div>  
-                        <div className="r-reviews"> REEEEEEEEEEEEEEEEEEEEEEEE</div>
+                        <div className="r-reviews"> The food was great!</div>
                         <div className="r-breakline"></div> 
 
                         
+                    </div>
+                    <div className="r-sticky-info">
+                        <div  className="r-website">
+                            <i class="fas fa-external-link-alt fa-lg"></i> 
+                            <a href={this.state.restaurant.website} class="r-sticky-label">{this.state.restaurant.website}</a>
+                        </div>
+                        <div href="https://www.google.com/maps" className="r-directions">
+                            <i class="fas fa-directions fa-lg"></i> 
+                            <a href="https://www.google.com/maps"  class="r-sticky-label">Get Directions</a>
+                        </div>
                     </div>
                 </div>
             </div>

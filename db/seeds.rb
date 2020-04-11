@@ -21,7 +21,7 @@ user5 = User.create(email: "caroline143@yahoo.com", password: "password", first_
 restaurant1 = Restaurant.create(
     name: "Ippudo NY",
     owner_id: 5,
-    website: "ippudony.com",
+    website: "https://www.ippudony.com",
     address: "65 4th Ave, New York, NY 10003",
     coordinates: [40.730943, -73.990295],
     pic_count: 0,
@@ -37,7 +37,7 @@ restaurant1 = Restaurant.create(
 restaurant2 = Restaurant.create(
     name: "Popeyes Louisiana Kitchen",
     owner_id: 2,
-    website: "popeyes.com",
+    website: "https://www.popeyes.com",
     address: "47 14th St, New York, NY 10011",
     coordinates: [40.737095, -73.995843],
     pic_count: 0,
@@ -51,7 +51,7 @@ restaurant2 = Restaurant.create(
 restaurant3 = Restaurant.create(
     name: "DORADO Tacos & Quesadillas",
     owner_id: 3,
-    website: "doradotacos.com",
+    website: "https://www.doradotacos.com",
     address: "28 E 12th St, New York, NY 10003",
     coordinates: [40.733960, -73.993156],
     pic_count: 0,
@@ -67,7 +67,7 @@ restaurant3 = Restaurant.create(
 restaurant4 = Restaurant.create(
     name: "Joe's Pizza",
     owner_id: 4,
-    website:"joespizzanyc.com",
+    website:"https://www.joespizzanyc.com",
     address: "150 E 14th St, New York, NY 10003",
     coordinates: [40.733240, -73.987652],
     pic_count: 0,
@@ -83,7 +83,7 @@ restaurant4 = Restaurant.create(
 restaurant5 = Restaurant.create(
     name: "Taco Bell",
     owner_id: 2,
-    website: "tacobell.com",
+    website: "https://www.tacobell.com",
     address: "18 E 14th St, New York, NY 10003",
     coordinates: [40.735333, -73.992812],
     pic_count: 0,
