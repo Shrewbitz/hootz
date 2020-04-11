@@ -41,7 +41,7 @@ export default ({currentUser, logout})=> {
                     <input className="searchbar-rest" type="search"  placeholder="Restaurants"/>
                     <div className="searchborder"></div>
                     <div className="psuedo-loc">Near</div>
-                    <input className="searchbar-loc"type="search"  placeholder="location"/>
+                    <input className="searchbar-loc"type="search"  placeholder="Location"/>
                     <button><i className="fas fa-search fa-lg"></i></button>
                 </form>
             </div>
