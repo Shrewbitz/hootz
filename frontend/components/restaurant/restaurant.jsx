@@ -85,7 +85,11 @@ class Restaurant extends React.Component {
                             <i class="fas fa-external-link-alt fa-lg"></i> 
                             <a href={this.state.restaurant.website} class="r-sticky-label">{this.state.restaurant.website}</a>
                         </div>
-                        <div href="https://www.google.com/maps" className="r-directions">
+                        <div  className="r-phone">
+                            <i class="fas fa-phone-alt fa-lg"></i>
+                            <a class="r-sticky-label">{this.state.restaurant.phone}</a>
+                        </div>
+                        <div className="r-directions">
                             <i class="fas fa-directions fa-lg"></i> 
                             <a href="https://www.google.com/maps"  class="r-sticky-label">Get Directions</a>
                         </div>
