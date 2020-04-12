@@ -19,6 +19,7 @@ class Restaurant extends React.Component {
 
 
     render() {
+        // debugger
         const claimed = this.state.restaurant.id ? <div className="r-claimed"><i className="fas fa-check-circle "></i><div className="r-claim-text">Claimed</div></div>  : ""
 
         const rating = this.state.restaurant.review_avg;
@@ -41,7 +42,9 @@ class Restaurant extends React.Component {
         return (
         <div>
             <div className="r-pic-container">
-                <div className="r-pic">pic1</div>
+                <div className="r-pic">
+                    <img className="r-inside" src={this.state.restaurant.photoURL}/>
+                </div>
                 <div className="r-pic">pic2</div>
                 <div className="r-pic">pic3</div>
                 <div className="r-pic">pic4</div>
@@ -89,21 +92,21 @@ class Restaurant extends React.Component {
                     </div>
                     <div className="r-sticky-info">
                         <div  className="r-website">
-                            <i class="fas fa-external-link-alt fa-lg"></i> 
-                            <a href={this.state.restaurant.website} class="r-sticky-label">{this.state.restaurant.website}</a>
+                            <i className="fas fa-external-link-alt fa-lg"></i> 
+                            <a href={this.state.restaurant.website} className="r-sticky-label">{this.state.restaurant.website}</a>
                         </div>
                         <div  className="r-phone">
-                            <i class="fas fa-phone-alt fa-lg"></i>
-                            <a class="r-sticky-label-phone">{this.state.restaurant.phone}</a>
+                            <i className="fas fa-phone-alt fa-lg"></i>
+                            <a className="r-sticky-label-phone">{this.state.restaurant.phone}</a>
                         </div>
                         <div className="r-directions">
-                            <i class="fas fa-directions fa-lg"></i> 
-                            <a href="https://www.google.com/maps"  class="r-sticky-label">Get Directions</a>
+                            <i className="fas fa-directions fa-lg"></i> 
+                            <a href="https://www.google.com/maps"  className="r-sticky-label">Get Directions</a>
                         </div>
                     </div>
                 </div>
             </div>
-
+            {/* <img src={this.state.restaurant.photoURL}/> */}
 
         </div>
         )

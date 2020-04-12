@@ -34,9 +34,14 @@
 
 .m1-pic {
    width: 217.5px;
-   background-color: orange;
    height: 174px;
-   border-radius: 4px 4px 0 0;
+}
+
+.m1-image {
+    
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    height: 100%;
 }
 
 .m1-label {
@@ -49,6 +54,7 @@
     font-size: 14px;
     line-height: 1.28571em;
     color: #333;
+    background-color: white;
     border: 1px solid #e6e6e6;
     border-radius: 0 0 4px 4px;
 }

@@ -51,19 +51,20 @@ export default ({currentUser, logout})=> {
             <div className="m1-title">Find the Best Restaurants in Town</div>
             <div className="m1-categories">
                 <div className="m1-category">
-                    <div className="m1-pic"></div>
+                    <div className="m1-pic"><img className="m1-image" src={window.salad} /></div>
                     <div className="m1-label">Vegetarian</div>
                 </div>
+                
                 <div className="m1-category">
-                    <div className="m1-pic"></div>
+                    <div className="m1-pic"><img className="m1-image" src={window.pasta} /></div>
                     <div className="m1-label">Noodles</div>
                 </div>
                 <div className="m1-category">
-                    <div className="m1-pic"></div>
+                    <div className="m1-pic"><img className="m1-image" src={window.burger} /></div>
                     <div className="m1-label">Burgers</div>
                 </div>
                 <div className="m1-category">
-                    <div className="m1-pic"></div>
+                    <div className="m1-pic"><img className="m1-image" src={window.pizza} /></div>
                     <div className="m1-label">Pizza</div>
                 </div>
             </div> 

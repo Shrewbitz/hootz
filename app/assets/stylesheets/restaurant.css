@@ -8,6 +8,15 @@
     width: 25%;
     border: solid 1px white;
     background-color: steelblue;
+    object-fit: cover;
+    /* width: 300px;
+    height: 298px; */
+}
+
+.r-inside {
+    /* object-fit: ; */
+    width: 300px;
+    height: 298px;
 }
 
 .r-mid {
@@ -202,6 +211,10 @@
     display: block;
 }
 
+.r-dropdown:hover .claimClassTriangle {
+    display: block;
+}
+
 
 
 .claimClass {
@@ -220,7 +233,7 @@
 }
 
 .claimClassTriangle {
-    /* display: none; */
+    display: none;
     position: absolute;
     width: 185px;
     margin: 10px; 

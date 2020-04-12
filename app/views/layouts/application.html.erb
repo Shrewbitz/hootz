@@ -7,12 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('favicon2.ico') %>
+
      <script src="https://kit.fontawesome.com/0deb597c3f.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       window.sign = "<%= image_url('signup_illustration.png') %>"
       window.hootz = "<%= image_url('hootz_nolines.png') %>"
       window.hootz2 = "<%= image_url('hootz_line.png') %>"
       window.city = "<%= image_url('footer_cityscape.png') %>"
+      window.salad = "<%= image_url('salad.jpg') %>"
+      window.burger = "<%= image_url('burger.jpg') %>"
+      window.pasta = "<%= image_url('pasta.jpg') %>"
+      window.pizza = "<%= image_url('pizza.jpg') %>"
     </script>
     <% if current_user  %>
       <script>
