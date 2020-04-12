@@ -47,6 +47,28 @@ export default ({currentUser, logout})=> {
             </div>
         </header>
         <div >
+        <div className="m1-section">
+            <div className="m1-title">Find the Best Restaurants in Town</div>
+            <div className="m1-categories">
+                <div className="m1-category">
+                    <div className="m1-pic"></div>
+                    <div className="m1-label">Vegetarian</div>
+                </div>
+                <div className="m1-category">
+                    <div className="m1-pic"></div>
+                    <div className="m1-label">Noodles</div>
+                </div>
+                <div className="m1-category">
+                    <div className="m1-pic"></div>
+                    <div className="m1-label">Burgers</div>
+                </div>
+                <div className="m1-category">
+                    <div className="m1-pic"></div>
+                    <div className="m1-label">Pizza</div>
+                </div>
+            </div> 
+
+        </div>
 
         </div>
             <div className="empty-placeholder">

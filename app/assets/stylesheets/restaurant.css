@@ -142,7 +142,7 @@
     /* position: -webkit-sticky;  */
     position: sticky;
     top: 18px;
-    padding: 6px;
+    padding: 0 6px;
 }
 
 .r-website {
@@ -178,6 +178,12 @@
     padding-left: 10px;
     text-decoration: none;
     color: #0073bb;
+}
+
+.r-sticky-label-phone {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #666;
 }
 
 .r-sticky-label:hover {

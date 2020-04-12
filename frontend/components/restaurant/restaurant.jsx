@@ -94,18 +94,13 @@ class Restaurant extends React.Component {
                         </div>
                         <div  className="r-phone">
                             <i class="fas fa-phone-alt fa-lg"></i>
-                            <a class="r-sticky-label">{this.state.restaurant.phone}</a>
+                            <a class="r-sticky-label-phone">{this.state.restaurant.phone}</a>
                         </div>
                         <div className="r-directions">
                             <i class="fas fa-directions fa-lg"></i> 
                             <a href="https://www.google.com/maps"  class="r-sticky-label">Get Directions</a>
                         </div>
                     </div>
-                    {/* <div className="claimClassTriangle">
-                            <div className="claimClass">
-                                hi
-                            </div>
-                        </div> */}
                 </div>
             </div>
 
