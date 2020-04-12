@@ -131,6 +131,7 @@
     line-height: 1.28571em;
 }
 
+
 .r-sticky-info {
     display: flex;
     flex-direction: column;
@@ -138,7 +139,9 @@
     height: 99px;
     border: solid 1px #e6e6e6;
     border-radius: 4px;
+    /* position: -webkit-sticky;  */
     position: sticky;
+    top: 18px;
     padding: 6px;
 }
 
@@ -170,3 +173,80 @@
 .r-sticky-label:hover {
     text-decoration: underline;
 }
+
+
+/* email */
+.r-dropdown {
+    position: relative;
+    width: 80px;
+}
+
+
+.r-dropdown:hover .claimClass {
+    display: block;
+}
+
+
+
+.claimClass {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    height: 36px;
+    width: 320px;
+    padding: 11px 5px 11px 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    background-color: white; 
+    /* padding: 0 10px; */
+}
+
+.claimClassTriangle {
+    /* display: none; */
+    position: absolute;
+    width: 185px;
+    margin: 10px; 
+    z-index: 2;
+    height: 0px;
+    top: -60px;
+    left: 10px;
+}
+
+
+
+.claimClass:after {
+	content: '';
+	position: absolute;
+	top: 59px;
+	left: 29px;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-top-color: #ccc;;
+	border-bottom: 0;
+	margin-left: -10px;
+    margin-bottom: -10px;
+    z-index: 2;
+    
+}
+
+
+
+.claimClassTriangle:after {
+    content: '';
+	position: absolute;
+	top: 59px;
+	left: 31px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	margin-left: -10px;
+    margin-bottom: -10px;
+    z-index: 2;
+}
+
+/* email */

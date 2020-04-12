@@ -46,6 +46,9 @@ export default ({currentUser, logout})=> {
                 </form>
             </div>
         </header>
+        <div >
+
+        </div>
             <div className="empty-placeholder">
                 <Link className="link" to="/restaurants/1">  Ippudo NY </Link>
                 <Link className="link" to="/restaurants/2">  Popeyes Louisiana Kitchen  </Link>
