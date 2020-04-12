@@ -33,7 +33,7 @@ class Restaurant extends React.Component {
         (rating >= 1.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
         <div><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> );
 
-
+        
 
         
 
@@ -53,7 +53,14 @@ class Restaurant extends React.Component {
                         <div className="r-info-container">
                             <div className="r-info">
                                 <div className="r-name">{this.state.restaurant.name}</div>
-                                <div>{claimed}</div>
+                                <div className="r-dropdown">
+                                    <div className="r-claim">{claimed}</div>
+                                    <div className="claimClassTriangle">
+                                        <div className="claimClass">
+                                            This business has been claimed by the owner or a representative.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="r-info">
                                 <div className="r-stars">{stars}</div>
@@ -94,6 +101,11 @@ class Restaurant extends React.Component {
                             <a href="https://www.google.com/maps"  class="r-sticky-label">Get Directions</a>
                         </div>
                     </div>
+                    {/* <div className="claimClassTriangle">
+                            <div className="claimClass">
+                                hi
+                            </div>
+                        </div> */}
                 </div>
             </div>
 
