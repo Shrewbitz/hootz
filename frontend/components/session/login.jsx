@@ -121,7 +121,7 @@ class Login extends React.Component {
                         <h2 className="login-head">Log In to Hootz</h2>
                         <div className="login-to-signup">
                             <div>New to Hootz?</div>
-                            <Link className="signup-link" to="/signup">Sign Up</Link>
+                            <Link className="signup-link" to="/signup">Sign Up </Link>
                         </div>
                         <button className="demo-user-button" onClick={this.manualLogin}> 
                             <i className="fas fa-sign-in-alt "></i>

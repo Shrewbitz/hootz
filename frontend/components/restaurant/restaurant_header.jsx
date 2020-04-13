@@ -26,7 +26,7 @@ export default ({currentUser, logout})=> {
                 <div className="restaurant-mid-head-container">
                     <div className="restaurant-search">
                             <form className="restaurant-nav-search">
-                                <input className="restaurant-searchbar-rest" type="search"  placeholder="  Restaurants"/>
+                                <input className="restaurant-searchbar-rest" type="search"  placeholder="Restaurants"/>
                                 <div className="restaurant-searchborder"></div>
                                 {/* <div className="searchborder"></div> */}
                                 <input className="restaurant-searchbar-loc"type="search"  placeholder="Location"/>

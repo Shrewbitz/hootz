@@ -195,7 +195,7 @@ class Signup extends React.Component {
                         </form>
                             <div className="login-to-signup-mini">
                                 <div>Already on Hootz?</div>
-                                <Link className="signup-link" to="/login">Log In</Link>
+                                <Link className="signup-link" to="/login">Log In </Link>
                             </div>
                     </div>
                     <div className="login-container">

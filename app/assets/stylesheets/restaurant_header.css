@@ -34,7 +34,7 @@ justify-content: flex-end;
 
 .restaurant-left-margin {
     margin-right: 32px;
-    width: 15%;
+    width: 17%;
 }
 .restaurant-logo-container {
 }
@@ -82,14 +82,16 @@ justify-content: flex-end;
 }
 
 .restaurant-nav-search button {
+    transition: background-color .3s ease;
     background-color: #d32323;
     color: white;
     border: none;
     width: 56px;
     height: 48px;
-    padding: 14px 18px 13px 18px;
+    padding: 14px 18px 13px 16px;
     border-radius: 0 4px 4px 0;
     /* box-shadow: 0 2px 18px rgba(0,0,0,.15); */
+    font-size: 18px;
 }
 
 .restaurant-nav-search button:hover {
@@ -97,17 +99,18 @@ justify-content: flex-end;
 }
 
 .restaurant-nav-search button:active {
-    transition: background-color 0.0s ease;
     background-color: #f40d15;
 }
 
 .restaurant-searchbar-rest {
     width: 407px;
     height: 48px;
+    padding-left: 15px;
     border: none;
     font-size: 18px;
     color: #333;
     border-radius: 4px 0 0 4px;
+    outline: none;
     /* box-shadow: 0 2px 18px rgba(0,0,0,.15); */
     
 }
@@ -123,11 +126,12 @@ justify-content: flex-end;
 
 .restaurant-searchbar-loc {
     width: 373px;
-    padding-left: 6px;
+    padding-left: 11px;
     height: 48px;
     border: none;
     font-size: 18px;
     color: #333;
+    outline: none;
     /* box-shadow: 0 2px 18px rgba(0,0,0,.15); */
 }
 
@@ -174,7 +178,7 @@ justify-content: flex-end;
 
 .restaurant-login {
     width: 92px;
-   
+    transition: .8s background-color ease;
     padding: 10px 16px 11px 16px;
    
     background-color: white;

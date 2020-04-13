@@ -144,6 +144,7 @@
     border: none;
     font-size: 18px;
     color: #333;
+    outline: none;
     
 }
 
@@ -167,6 +168,7 @@
     border: none;
     font-size: 18px;
     color: #333;
+    outline: none;
 }
 
 .nav-search button {
