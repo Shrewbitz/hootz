@@ -94,3 +94,15 @@ restaurant5 = Restaurant.create(
     about: "none"
 )
 
+restaurant6 = Restaurant.create(
+    name: "Blossom",
+    website: "https://www.blossomnyc.com/chelsea",
+    address: "187 9th Ave, New York, NY 10011",
+    coordinates: [40.745518, -74.002338],
+    pic_count: 0,
+    review_count: 29,
+    review_avg: 4,
+    phone: "(212) 627-1144",
+    cost: "$$$",
+    about: "Blossom, located in an historic townhouse in West Chelsea, serves gourmet organic cuisine that is one hundred percent vegan. We strive through our fresh ingredients and innovative dishes to create a unique dining experience superior to any other. Eating organic and vegan encourages a healthy lifestyle and our mission is to be the best at what we do. Blossom is first and foremost animal caring."
+)
