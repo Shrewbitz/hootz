@@ -4,3 +4,10 @@ export const fetchRestaurant = id => (
         url: `/api/restaurants/${id}`
     })
 )
+
+export const fetchRestaurants = () => (
+    $.ajax({
+        method: 'get',
+        url: '/api/restaurants'
+    })
+)

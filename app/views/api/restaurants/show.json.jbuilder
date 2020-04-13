@@ -1,2 +1,4 @@
-json.extract! @restaurant, :id, :name, :owner_id, :website, :address, :coordinates, :pic_count, :review_count, :review_avg, :phone, :cost, :about
-json.photoURL @restaurant.photos.map {|photo| url_for(photo)}
+json.partial! 'restaurant', restaurant: @restaurant
+if @restaurant.photos.attached?
+    json.photos @restaurant.photos.map {|photo| url_for(photo)}
+end

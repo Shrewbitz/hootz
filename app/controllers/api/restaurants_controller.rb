@@ -4,6 +4,9 @@ class Api::RestaurantsController < ApplicationController
         @restaurant = Restaurant.create!(restaurant_params)
     end
 
+    def index
+        @restaurants = Restaurant.all
+    end
 
     def show
         @restaurant = Restaurant.find(params[:id])

@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 export default ({currentUser, logout})=> {
+    // debugger
     const display = currentUser ? (
         <div>
             {/* <p>This should be way different</p> */}
@@ -72,14 +73,15 @@ export default ({currentUser, logout})=> {
         </div>
 
         </div>
-            <div className="empty-placeholder">
-                <Link className="link" to="/restaurants/1">  Ippudo NY </Link>
+            
+                {/* <Link className="link" to="/restaurants/1">  Ippudo NY </Link>
                 <Link className="link" to="/restaurants/2">  Popeyes Louisiana Kitchen  </Link>
                 <Link className="link" to="/restaurants/3">  DORADO Tacos {"&"} Quesadillas </Link>
                 <Link className="link" to="/restaurants/4">  Joe's Pizza </Link>
                 <Link className="link" to="/restaurants/5">  Taco Bell </Link>
+                <Link className="link" to="/restaurants/6">  Blossom </Link> */}
             
-            </div>
+        
         </>    
     );
 };

@@ -5,7 +5,7 @@ class Restaurant extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            restaurant: ""
+            restaurant: {photos: []}
         };
     };
 
@@ -34,7 +34,10 @@ class Restaurant extends React.Component {
         (rating >= 1.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
         <div><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> );
 
-        
+        // const pic1 = this.state.restaurant.photoURL[0]
+        // const pic2 = this.state.restaurant.photoURL[1]
+        // const pic3 = this.state.restaurant.photoURL[2]
+        // const pic4 = this.state.restaurant.photoURL[3]
 
         
 
@@ -42,12 +45,21 @@ class Restaurant extends React.Component {
         return (
         <div>
             <div className="r-pic-container">
+            {this.state.restaurant.photos.map((photo, idx) => {
+                return (<div key={idx} className="r-pic"><img  className="r-inside" src={photo}/></div>);
+            })}
+                {/* <div className="r-pic">
+                    <img className="r-inside" src={this.state.restaurant.photos[0]}/>
+                </div>
                 <div className="r-pic">
                     <img className="r-inside" src={this.state.restaurant.photoURL}/>
                 </div>
-                <div className="r-pic">pic2</div>
-                <div className="r-pic">pic3</div>
-                <div className="r-pic">pic4</div>
+                <div className="r-pic">
+                    <img className="r-inside" src={this.state.restaurant.photoURL}/>
+                </div>
+                <div className="r-pic">
+                    <img className="r-inside" src={this.state.restaurant.photoURL}/>
+                </div> */}
             </div>
             
             <div className="r-mid">
@@ -67,7 +79,7 @@ class Restaurant extends React.Component {
                             </div>
                             <div className="r-info">
                                 <div className="r-stars">{stars}</div>
-                                <div className="r-review-count">{this.state.restaurant.review_count} reviews</div>
+                                <div className="r-review-count">{this.state.restaurant.review_count} Reviews</div>
                             </div>
                             <div className="r-info">
                                 <div className="r-cost">{this.state.restaurant.cost} </div>

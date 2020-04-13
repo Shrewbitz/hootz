@@ -17,7 +17,7 @@ class Api::UsersController < ApplicationController
         elsif params[:user][:password].length < 1
             render json: ["Please fill out this field.", 3], status: 405
         elsif params[:user][:password].length < 6
-            render json: ["Password must be at least 6 characters in length.", 7,], status: 405
+            render json: ["Please choose a password of at least 6 characters", 7,], status: 405
         elsif params[:user][:zipcode].length < 1
             render json: ["Please enter your ZIP code.", 7], status: 406
         elsif params[:user][:zipcode].length < 5 || params[:user][:zipcode].length > 5  
