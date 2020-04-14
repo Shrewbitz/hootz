@@ -10,12 +10,38 @@ class RestaurantIndex extends React.Component {
         };
     };
 
+
+
+
+
     componentDidMount() {
         // debugger
         this.props.fetchRestaurants().then(restaurants => {
             this.setState({restaurants: restaurants.restaurants})
         });;
     }
+
+
+
+
+
+    handleInput(type) {
+        return(e) => {
+            this.setState({[type]: e.target.value})
+        };
+    };
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.login(this.state)
+        .then(() => this.props.history.push('/'), dberrors => { 
+            this.setState({errors: dberrors.errors});
+        });
+    };
+
+
+
+
 
 
     render() {

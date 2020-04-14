@@ -8,6 +8,9 @@
 require 'open-uri'
 User.destroy_all
 Restaurant.destroy_all
+Tag.destroy_all
+Tag_join.destroy_all
+
 
 user1 = User.create!(email: "demo_user@gmail.com", password: "password", first_name: "David", last_name: "Johnson", zipcode: "10011")
 
@@ -35,6 +38,7 @@ restaurant1 = Restaurant.create!(
 
     IPPUDO started in 1985 with a seating of only ten in the city of Fukuoka. Instantly, it revolutionized the ramen world with its fashionable décor, hospitable service, and delicious bowls of ramen. It appealed to the young and old alike and kick-started a ramen craze that lasted over two decades. Today it has established itself as the market leader in Japan, with more than 70 outlets under the brand. In a fiercely competitive environment where more than 3,500 ramen restaurants come and go each year, IPPUDO has remained at the cutting edge of innovation and quality.",
 )
+
 
 restaurant2 = Restaurant.create!(
     name: "Popeyes Louisiana Kitchen",
@@ -141,3 +145,73 @@ restaurant_pic21 = restaurant6.photos.attach(io: open("https://hootz-seed.s3.ama
 restaurant_pic22 = restaurant6.photos.attach(io: open("https://hootz-seed.s3.amazonaws.com/hootz-pictures/blossom2.jpg"), filename: "b2.jpg")
 restaurant_pic23 = restaurant6.photos.attach(io: open("https://hootz-seed.s3.amazonaws.com/hootz-pictures/blossom3.jpg"), filename: "b3.jpg")
 restaurant_pic24 = restaurant6.photos.attach(io: open("https://hootz-seed.s3.amazonaws.com/hootz-pictures/blossom4.jpg"), filename: "b4.jpg")
+
+
+
+
+tag1 = Tag.create!(tag: "vegetarian")
+tag2 = Tag.create!(tag: "noodles")
+tag3 = Tag.create!(tag: "burgers")
+tag4 = Tag.create!(tag: "chicken")
+tag5 = Tag.create!(tag: "mexican")
+tag6 = Tag.create!(tag: "fast-food")
+tag7 = Tag.create!(tag: "pizza")
+tag8 = Tag.create!(tag: "italian")
+tag9 = Tag.create!(tag: "chinese")
+tag10 = Tag.create!(tag: "japanese")
+tag11 = Tag.create!(tag: "korean")
+tag12 = Tag.create!(tag: "indian")
+tag13 = Tag.create!(tag: "middle-eastern")
+tag14 = Tag.create!(tag: "halal")
+tag15 = Tag.create!(tag: "deli")
+tag16 = Tag.create!(tag: "seafood")
+tag17 = Tag.create!(tag: "sandwiches")
+tag18 = Tag.create!(tag: "bar")
+
+
+join1 = Tag_join.create!(
+    restaurant_id: restaurant1.id,
+    tag_id: tag2.id
+)
+join2 = Tag_join.create!(
+    restaurant_id: restaurant1.id,
+    tag_id: tag10.id
+)
+
+join3 = Tag_join.create!(
+    restaurant_id: restaurant2.id,
+    tag_id: tag4.id
+)
+join4 = Tag_join.create!(
+    restaurant_id: restaurant2.id,
+    tag_id: tag6.id
+)
+
+join5 = Tag_join.create!(
+    restaurant_id: restaurant3.id,
+    tag_id: tag5.id
+)
+
+join6 = Tag_join.create!(
+    restaurant_id: restaurant4.id,
+    tag_id: tag7.id
+)
+
+join7 = Tag_join.create!(
+    restaurant_id: restaurant4.id,
+    tag_id: tag8.id
+)
+
+join8 = Tag_join.create!(
+    restaurant_id: restaurant5.id,
+    tag_id: tag5.id
+)
+join9 = Tag_join.create!(
+    restaurant_id: restaurant5.id,
+    tag_id: tag6.id
+)
+
+join10 = Tag_join.create!(
+    restaurant_id: restaurant6.id,
+    tag_id: tag1.id
+)

@@ -5,7 +5,7 @@ class Restaurant extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            restaurant: {photos: []}
+            restaurant: {photos: [], tags: []}
         };
     };
 
@@ -39,9 +39,9 @@ class Restaurant extends React.Component {
         // const pic3 = this.state.restaurant.photoURL[2]
         // const pic4 = this.state.restaurant.photoURL[3]
 
-        
-
-
+        const length = this.state.restaurant.tags.length - 1
+        const invisible = length === 0 ? "invisible" : ""
+        // debugger
         return (
         <div>
             <div className="r-pic-container">
@@ -83,7 +83,14 @@ class Restaurant extends React.Component {
                             </div>
                             <div className="r-info">
                                 <div className="r-cost">{this.state.restaurant.cost} </div>
-                                <div className="r-tags"> tags go here</div>
+                                <div className="r-tags"> 
+                                    {this.state.restaurant.tags.slice(length - 1, length).map((tag, idx) => {
+                                        return (<div className={invisible} key={idx} >{tag.tag},&nbsp; </div>);
+                                    })}
+                                    {this.state.restaurant.tags.slice(length).map((tag, idx) => {
+                                        return (<div key={idx} >{tag.tag} </div>);
+                                    })}
+                                </div>
                             </div>
                             <div className="r-info">
                                 <div className="r-top-review"><i className="fas fa-star"></i> Write a Review</div>

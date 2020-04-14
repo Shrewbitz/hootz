@@ -83,6 +83,7 @@
 }
 
 .r-tags {
+    display: flex;
     margin-top: 6px;
     margin-left: 10px
 }
@@ -279,3 +280,6 @@
 }
 
 /* email */
+.invisible {
+    display: none;
+}
