@@ -460,6 +460,36 @@
     border: solid 1px #999;
 }
 
+.signupForm form label select {
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px 9px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    background-color: white;
+    border: solid 1px #999;
+    color: #999;
+}
+
+.banana {
+    color: #999;
+}
+
+.birthday-color{
+    color: #333;
+}
+
+input{
+    /* outline: none; */
+    /* color: #3297FD; */
+}
+
+input:focus{
+    /* outline: green; */
+    /* border-color: royalblue; */
+    /* background-color: red; */
+}
+
 .signupForm form {
     display: flex;
     flex-direction: column;
@@ -492,6 +522,7 @@
     text-align: center;
     font-weight: bold;
     color: #333;
+    
 }
 
 .spacer {

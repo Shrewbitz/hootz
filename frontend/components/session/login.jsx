@@ -43,7 +43,9 @@ class Login extends React.Component {
 
     handleClose(e) {
         e.preventDefault();
+        if (this.state.errors[1] < 7) {
         this.setState({errors: []})
+        }
     }
 
     handleBubbleClose(e) {
@@ -96,13 +98,14 @@ class Login extends React.Component {
 
         return (
             <>
+            <div onClick={this.handleClose}>
                 <div className="top-error-container" onClick={handleBubbleClose}>  
                     <div className={topClass}>
                         {this.topError()} 
                         <div className="top-class-close">{topClose}</div>
                     </div>
                 </div>
-                <div className="loginForm" onClick={this.handleClose}>
+                <div className="loginForm">
                     <div className="loginbox">
                         <div className={errorRefil}></div>
                         <div className={emailClassTriangle}>
@@ -151,6 +154,7 @@ class Login extends React.Component {
                     <div className="sign-container">
                         <img className="login-pic" src={window.sign}/>
                     </div>
+                </div>
                 </div>
             </>
         )
