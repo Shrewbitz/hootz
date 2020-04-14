@@ -25,19 +25,19 @@ class RestaurantIndex extends React.Component {
 
 
 
-    handleInput(type) {
-        return(e) => {
-            this.setState({[type]: e.target.value})
-        };
-    };
+    // handleInput(type) {
+    //     return(e) => {
+    //         this.setState({[type]: e.target.value})
+    //     };
+    // };
 
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.login(this.state)
-        .then(() => this.props.history.push('/'), dberrors => { 
-            this.setState({errors: dberrors.errors});
-        });
-    };
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     this.props.login(this.state)
+    //     .then(() => this.props.history.push('/'), dberrors => { 
+    //         this.setState({errors: dberrors.errors});
+    //     });
+    // };
 
 
 
