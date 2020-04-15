@@ -10,6 +10,7 @@ User.destroy_all
 Restaurant.destroy_all
 Tag.destroy_all
 Tag_join.destroy_all
+Review.destroy_all
 
 
 user1 = User.create!(email: "demo_user@gmail.com", password: "password", first_name: "David", last_name: "Johnson", zipcode: "10011")
@@ -214,4 +215,12 @@ join9 = Tag_join.create!(
 join10 = Tag_join.create!(
     restaurant_id: restaurant6.id,
     tag_id: tag1.id
+)
+
+
+review1 = Review.create!(
+    restaurant_id: restaurant1.id,
+    user_id: user2.id,
+    score: 4,
+    body: "The noodles were a little too soft for my taste, but the broth was excellent."
 )

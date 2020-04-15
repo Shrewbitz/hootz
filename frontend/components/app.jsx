@@ -7,6 +7,7 @@ import NavContainer from './nav/nav_container'
 import RestaurantIndexContainer from "./restaurant/restaurant_index_container"
 import RestaurantShowContainer from './restaurant/restaurant_container'
 import RestaurantHeaderContainer from './restaurant/restaurant_header_container'
+import ReviewIndexContainer from "./review/review_index_container"
 import SignupHeader from './signup_header/signup_header'
 import Footer from './footer/footer'
 import {AuthRoute} from '../util/route_utils'

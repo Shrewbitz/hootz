@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy, :show]
-    resources :restaurants, only: [:create, :show, :index] 
+    resources :restaurants, only: [:create, :show, :index] do 
+        resources :reviews, only: [:create, :index]
+    end
     get '/restaurants/search/:search', to: 'restaurants#search'
   end
 end

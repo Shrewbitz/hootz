@@ -10,6 +10,14 @@ class User < ApplicationRecord
     has_many :restaurants,
     foreign_key: :owner_id,
     class_name: :Restaurant
+    
+    has_many :review_joins,
+    foreign_key: :user_id,
+    class_name: :Review
+
+    has_many :reviews,
+    through: :review_joins,
+    source: :restaurant
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReviewIndex from '../review/review_index_container'
 
 class Restaurant extends React.Component {
     constructor(props) {
@@ -106,7 +107,7 @@ class Restaurant extends React.Component {
                         <div className="r-section-label">Reviews</div>  
                         <div className="r-reviews"> The food was great!</div>
                         <div className="r-breakline"></div> 
-
+                        <ReviewIndex></ReviewIndex>
                         
                     </div>
                     <div className="r-sticky-info">
