@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SearchPageBar from '../search/searchpage_container'
 
 export default ({currentUser, logout})=> {
     const display = currentUser ? (
@@ -25,13 +26,13 @@ export default ({currentUser, logout})=> {
                 </div>
                 <div className="restaurant-mid-head-container">
                     <div className="restaurant-search">
-                            <form className="restaurant-nav-search">
+                        <SearchPageBar></SearchPageBar>
+                            {/* <form className="restaurant-nav-search">
                                 <input className="restaurant-searchbar-rest" type="search"  placeholder="Restaurants"/>
                                 <div className="restaurant-searchborder"></div>
-                                {/* <div className="searchborder"></div> */}
                                 <input className="restaurant-searchbar-loc"type="search"  placeholder="Location"/>
                                 <button><i className="fas fa-search fa-lg"></i></button>
-                            </form>
+                            </form> */}
                     </div>
                 </div>
                     <div className="restaurant-right-container">

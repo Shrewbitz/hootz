@@ -17,8 +17,9 @@ class RestaurantIndex extends React.Component {
 
 
     componentDidMount() {
+        // window.scrollTo(0, 0);
         // debugger
-        this.props.fetchRestaurants()
+        // this.props.fetchRestaurants()
         // .then(restaurants => {
         //         this.setState({restaurants: restaurants.restaurants})
         //     });;
@@ -39,12 +40,21 @@ class RestaurantIndex extends React.Component {
             return <div></div>
         }
         const restaurants = this.props.restaurants
+        // this.state.restaurant.photos
+        let x = Object.values(restaurants)
         // debugger
         return (
             <div className="empty-placeholder">
                 {
                     Object.values(restaurants).map((restaurant, idx) =>
-                    (<Link key={idx} className="link" to={`/restaurants/${restaurant.id}`}> {restaurant.name} </Link>))
+                    (<Link key={idx} className="link" to={`/restaurants/${restaurant.id}`}>
+                        <div className="thumbnail-container">
+                        <img className="thumbnail"  src={restaurant.photos[0]}/>
+                        </div>
+                        <div></div>
+                        <div>{restaurant.name}</div>
+                         
+                    </Link>))
                 }
             </div>
         )

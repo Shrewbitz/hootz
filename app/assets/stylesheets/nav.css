@@ -112,10 +112,7 @@
 }
 
 
-.empty-placeholder {
-    height: 1000px;
-    width: 100%;
-}
+
 
 
 .nav-search {
@@ -196,10 +193,3 @@
     flex-direction: column;
 }
 
-.link {
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-    padding: 20px;
-    background-color: #d32323;
-}

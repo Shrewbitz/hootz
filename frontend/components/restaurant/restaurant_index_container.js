@@ -9,7 +9,7 @@ const msp = state => {
 };
 
 const mdp = dispatch => ({
-    fetchRestaurants: () => dispatch(fetchRestaurants()),
+    fetchRestaurants: (search) => dispatch(fetchRestaurants(search)),
 })
 
 export default connect(msp, mdp)(restaurant_index)
