@@ -1,5 +1,5 @@
 class Api::RestaurantsController < ApplicationController
-    require 'byebug'
+   
 
     def create
         @restaurant = Restaurant.create!(restaurant_params)
