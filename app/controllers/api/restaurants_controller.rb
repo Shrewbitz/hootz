@@ -1,4 +1,5 @@
 class Api::RestaurantsController < ApplicationController
+    require 'byebug'
 
     def create
         @restaurant = Restaurant.create!(restaurant_params)
@@ -6,6 +7,28 @@ class Api::RestaurantsController < ApplicationController
 
     def index
         @restaurants = Restaurant.all
+    end
+
+    def search 
+        # debugger
+        search = params[:search]
+       
+    
+              @restaurants = Restaurant.where(name: search)  
+            #   debugger
+            if @restaurants.length == 0
+                @restaurants = Restaurant.where(["address LIKE ?", "%#{search}%"])
+            end    
+            if @restaurants.length == 0
+              # debugger
+              x = Tag.find_by(tag: search)
+            #   debugger
+              if x
+                @restaurants = x.restaurants
+              end
+            end
+        # end
+        render :index
     end
 
     def show

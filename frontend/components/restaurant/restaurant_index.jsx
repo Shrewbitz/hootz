@@ -6,8 +6,10 @@ class RestaurantIndex extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            restaurants: []
+            // restaurants: []
         };
+        // this.render = this.render.bind(this)
+        // this.componentDidMount = this.componentDidMount.bind(this)
     };
 
 
@@ -16,36 +18,27 @@ class RestaurantIndex extends React.Component {
 
     componentDidMount() {
         // debugger
-        this.props.fetchRestaurants().then(restaurants => {
-            this.setState({restaurants: restaurants.restaurants})
-        });;
+        this.props.fetchRestaurants()
+        // .then(restaurants => {
+        //         this.setState({restaurants: restaurants.restaurants})
+        //     });;
+            // debugger
     }
 
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.restaurants !== prevProps.props.restaurants ) {
 
-
-
-
-    // handleInput(type) {
-    //     return(e) => {
-    //         this.setState({[type]: e.target.value})
-    //     };
-    // };
-
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     this.props.login(this.state)
-    //     .then(() => this.props.history.push('/'), dberrors => { 
-    //         this.setState({errors: dberrors.errors});
-    //     });
-    // };
-
-
-
+    //     }
+    // }
 
 
 
     render() {
-        const { restaurants} = this.state
+        // debugger
+        if (Object.keys(this.props.restaurants).length === 0) {
+            return <div></div>
+        }
+        const restaurants = this.props.restaurants
         // debugger
         return (
             <div className="empty-placeholder">

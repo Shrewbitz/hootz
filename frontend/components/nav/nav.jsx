@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SearchBar from '../search/search_container'
+import { searchRestaurants } from '../../util/restaurant_api_util';
 
 export default ({currentUser, logout})=> {
     // debugger
@@ -36,22 +38,22 @@ export default ({currentUser, logout})=> {
             </div>
             <div className="nav-bottom">
                 <h1 className="hootz"><img src={window.hootz}/></h1>
-                
-                <form className="nav-search">
+                <SearchBar></SearchBar>
+                {/* <form className="nav-search">
                     <div className="psuedo-rest">Find</div>
                     <input className="searchbar-rest" type="search"  placeholder="Restaurants"/>
                     <div className="searchborder"></div>
                     <div className="psuedo-loc">Near</div>
                     <input className="searchbar-loc"type="search"  placeholder="Location"/>
                     <button><i className="fas fa-search fa-lg"></i></button>
-                </form>
+                </form> */}
             </div>
         </header>
         <div >
         <div className="m1-section">
             <div className="m1-title">Find the Best Restaurants in Town</div>
             <div className="m1-categories">
-                <div className="m1-category">
+                <div  className="m1-category">
                     <div className="m1-pic"><img className="m1-image" src={window.salad} /></div>
                     <div className="m1-label">Vegetarian</div>
                 </div>
