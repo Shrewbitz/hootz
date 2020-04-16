@@ -14,14 +14,14 @@ class Api::RestaurantsController < ApplicationController
         search = params[:search]
        
     
-              @restaurants = Restaurant.where(name: search)  
+              @restaurants = Restaurant.where(["name LIKE ?", "%#{search}%"])  
             #   debugger
             if @restaurants.length == 0
                 @restaurants = Restaurant.where(["address LIKE ?", "%#{search}%"])
             end    
             if @restaurants.length == 0
-              # debugger
-              x = Tag.find_by(tag: search)
+              lower = search.downcase
+              x = Tag.find_by(["tag LIKE ?", "%#{lower}%"])
             #   debugger
               if x
                 @restaurants = x.restaurants

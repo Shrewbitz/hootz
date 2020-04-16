@@ -68,7 +68,7 @@ class Nav extends React.Component {
             <>
             <div className="gray-top">
                 <i className="fas fa-suitcase fa-xs"></i>
-                <a className="gray-top-text" href="https://github.com/Shrewbitz/hoot/wiki">Go to the Hootz GitHub</a>
+                <a className="gray-top-text" target="blank" href="https://github.com/Shrewbitz/hoot/wiki">Go to the Hootz GitHub</a>
             </div>
             <header className="nav-bar">
                 <div className="nav-top">

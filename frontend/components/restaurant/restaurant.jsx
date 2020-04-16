@@ -11,6 +11,7 @@ class Restaurant extends React.Component {
     };
 
     componentDidMount() {
+        // debugger
         window.scrollTo(0, 0);
         this.props.fetchRestaurant(this.props.match.params.restaurantId).then(restaurant => {
             this.setState({restaurant: restaurant.restaurant})
@@ -34,6 +35,8 @@ class Restaurant extends React.Component {
         (rating >= 2) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
         (rating >= 1.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
         <div><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> );
+
+        
 
         // const pic1 = this.state.restaurant.photoURL[0]
         // const pic2 = this.state.restaurant.photoURL[1]
@@ -107,13 +110,13 @@ class Restaurant extends React.Component {
                         <div className="r-section-label">Reviews</div>  
                         <div className="r-reviews"> The food was great!</div>
                         <div className="r-breakline"></div> 
-                        <ReviewIndex></ReviewIndex>
+                                <ReviewIndex wildcard={this.props.match.params.restaurantId}></ReviewIndex>
                         
                     </div>
                     <div className="r-sticky-info">
                         <div  className="r-website">
                             <i className="fas fa-external-link-alt fa-lg"></i> 
-                            <a href={this.state.restaurant.website} className="r-sticky-label">{this.state.restaurant.website}</a>
+                            <a target="blank" href={this.state.restaurant.website} className="r-sticky-label">{this.state.restaurant.website}</a>
                         </div>
                         <div  className="r-phone">
                             <i className="fas fa-phone-alt fa-lg"></i>
@@ -121,7 +124,7 @@ class Restaurant extends React.Component {
                         </div>
                         <div className="r-directions">
                             <i className="fas fa-directions fa-lg"></i> 
-                            <a href="https://www.google.com/maps"  className="r-sticky-label">Get Directions</a>
+                            <a target="blank" href="https://www.google.com/maps"  className="r-sticky-label">Get Directions</a>
                         </div>
                     </div>
                 </div>

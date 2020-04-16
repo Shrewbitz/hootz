@@ -1,8 +1,10 @@
 import {connect} from 'react-redux';
 import review_index from './review_index';
 import {fetchReviews} from '../../actions/review_actions'
-const msp = state => {
+const msp = (state, ownProps) => {
+    // debugger
     return {
+    ownProps: ownProps,
     reviews: state.entities.reviews,
     restaurants: state.entities.restaurant
     }

@@ -16,8 +16,8 @@ export const receiveReview = (review) => {
 }
 
 
-export const fetchReviews = () => dispatch => (
-    APIUtil.fetchReviews().then(reviews => (
+export const fetchReviews = restaurant_id => dispatch => (
+    APIUtil.fetchReviews(restaurant_id).then(reviews => (
     dispatch(receiveReviews(reviews)))));
 
 

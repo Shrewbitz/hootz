@@ -7,6 +7,7 @@ class ReviewIndex extends React.Component {
         super(props)
         // debugger
         this.state = {
+
             // restaurants: []
         };
         // this.render = this.render.bind(this)
@@ -14,14 +15,26 @@ class ReviewIndex extends React.Component {
     };
 
 
-
-
-
     componentDidMount() {
         // window.scrollTo(0, 0);
         // debugger
-        // if (Object.keys(this.props.restaurants).length === 0) {
-        this.props.fetchReviews(this.props.restaurants.id)
+        // this.props.fetchReviews(10)
+        this.props.fetchReviews((this.props.wildcard))
+        // .then(restaurants => {
+        //         this.setState({restaurants: restaurants.restaurants})
+        //     });;
+    }
+
+
+    componentDidUpdate(prevProps) {
+        // window.scrollTo(0, 0);
+        // debugger
+        if (Object.keys(prevProps.restaurants).length > 0) {
+            if (Object.keys(this.props.reviews).length === 0) {
+                // this.props.fetchReviews(10)
+                this.props.fetchReviews((this.props.wildcard))
+            }
+        }
         // }
         // .then(restaurants => {
         //         this.setState({restaurants: restaurants.restaurants})
@@ -34,7 +47,6 @@ class ReviewIndex extends React.Component {
 
     //     }
     // }
-
 
 
     render() {

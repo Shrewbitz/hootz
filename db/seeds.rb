@@ -19,10 +19,11 @@ user2 = User.create!(email: "coporate@shill.com", password: "password", first_na
 
 user3 = User.create!(email: "l.northdale@gmail.com", password: "password", first_name: "Leah", last_name: "Northdale", zipcode: "10003")
 
-user4 = User.create!(email: "sexybeast@hotmail.com", password: "password", first_name: "Joe", last_name: "Poopue", zipcode: "10010")
+user4 = User.create!(email: "sexybeast@hotmail.com", password: "password", first_name: "Joe", last_name: "Dayton", zipcode: "10010")
 
 user5 = User.create!(email: "caroline143@yahoo.com", password: "password", first_name: "Caroline", last_name: "Wallace", zipcode: "10001")
 
+user5 = User.create!(email: "aflores@yahoo.com", password: "password", first_name: "Antonio", last_name: "Flores", zipcode: "10003")
 
 restaurant1 = Restaurant.create!(
     name: "Ippudo NY",
@@ -223,4 +224,103 @@ review1 = Review.create!(
     user_id: user2.id,
     score: 4,
     body: "The noodles were a little too soft for my taste, but the broth was excellent."
+)
+
+review2 = Review.create!(
+    restaurant_id: restaurant1.id,
+    user_id: user3.id,
+    score: 5,
+    body: "I know good ramen when I see it."
+)
+
+review3 = Review.create!(
+    restaurant_id: restaurant1.id,
+    user_id: user4.id,
+    score: 5,
+    body: "This is my go to ramen spot on a friday night after work."
+)
+
+review4 = Review.create!(
+    restaurant_id: restaurant4.id,
+    user_id: user5.id,
+    score: 4,
+    body: "I love Joe's! the slices are so big."
+)
+
+review5 = Review.create!(
+    restaurant_id: restaurant4.id,
+    user_id: user4.id,
+    score: 3,
+    body: "I love pizza as much as the next guy but this is New York. It's good pizza but it doesn't stand out in the crowd."
+)
+
+review6 = Review.create!(
+    restaurant_id: restaurant3.id,
+    user_id: user5.id,
+    score: 4,
+    body: "I reccomend their shrimp tacos."
+)
+
+review6 = Review.create!(
+    restaurant_id: restaurant3.id,
+    user_id: user2.id,
+    score: 3,
+    body: "Call me old fashioned but I rather eat at taco bell."
+)
+
+review7 = Review.create!(
+    restaurant_id: restaurant3.id,
+    user_id: user3.id,
+    score: 5,
+    body: "The guy above me is nuts! This is some of the best mexican food in the city."
+)
+
+
+review8 = Review.create!(
+    restaurant_id: restaurant2.id,
+    user_id: user3.id,
+    score: 4,
+    body: "The spicy chicken sandwich lives up to the hype."
+)
+
+review9 = Review.create!(
+    restaurant_id: restaurant2.id,
+    user_id: user4.id,
+    score: 2,
+    body: "It was kind of dirty and the food is meh."
+)
+
+review10 = Review.create!(
+    restaurant_id: restaurant5.id,
+    user_id: user5.id,
+    score: 3,
+    body: "It's a Taco Bell what do you expect?"
+)
+
+review10 = Review.create!(
+    restaurant_id: restaurant5.id,
+    user_id: user2.id,
+    score: 4,
+    body: "It's always open and the food is consistenly out fast."
+)
+
+review10 = Review.create!(
+    restaurant_id: restaurant6.id,
+    user_id: user2.id,
+    score: 1,
+    body: "There was no meat. :("
+)
+
+review11 = Review.create!(
+    restaurant_id: restaurant6.id,
+    user_id: user3.id,
+    score: 5,
+    body: "Blossom has everything the presentation, taste of the food, and the atmosphere. I will definitely be coming back again."
+)
+
+review12 = Review.create!(
+    restaurant_id: restaurant6.id,
+    user_id: user4.id,
+    score: 5,
+    body: "You can't go wrong with whatever you order."
 )
