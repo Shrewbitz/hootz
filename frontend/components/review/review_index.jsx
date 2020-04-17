@@ -17,7 +17,7 @@ class ReviewIndex extends React.Component {
 
 
     componentDidMount() {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         // debugger
         // this.props.fetchReviews(10)
         this.props.fetchReviews((this.props.wildcard))
@@ -28,7 +28,7 @@ class ReviewIndex extends React.Component {
 
 
     componentDidUpdate(prevProps) {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         // debugger
         if (Object.keys(prevProps.restaurants).length > 0) {
             if (Object.keys(this.props.reviews).length === 0) {

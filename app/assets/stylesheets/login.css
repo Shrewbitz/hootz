@@ -295,7 +295,7 @@
 
 /* password error */
 .login-head {
-    color: #2E4BC0;
+    color: #1E307B;
     display: flex;
     justify-content: center;
     font-size: 22px;
@@ -306,7 +306,7 @@
 }
 
 .signup-head {
-    color: #2E4BC0;
+    color: #1E307B;
     display: flex;
     justify-content: center;
     font-size: 22px;
@@ -426,11 +426,11 @@
 
 .login-submit {
     color: white;
-    background-color: #2E4BC0;
+    background-color: #1E307B;
     width: 100%;
     height: 40px;
     border-radius: 5px;
-    border: solid 1px #2E4BC0;
+    border: solid 1px #1E307B;
     padding: 10px 13px;
     font-size: 16px;
     font-weight: bold;

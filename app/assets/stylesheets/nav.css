@@ -170,7 +170,7 @@
 
 .nav-search button {
     transition: background-color .6s ease;
-    background-color: #2E4BC0;
+    background-color: #1E307B;
     color: white;
     border: none;
     padding: 14px 23px 13px 23px;
@@ -179,11 +179,11 @@
 
 .nav-search button:hover {
     transition: background-color .6s ease;
-    background-color: #2b3278;
+    background-color: #12244E;
 }
 
 .nav-search button:active {
-    background-color: #244697;
+    background-color: #161A3E;
 
 }
 

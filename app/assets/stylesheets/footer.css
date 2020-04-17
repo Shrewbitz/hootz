@@ -9,7 +9,7 @@
 
 .footer-label {
     font-size: 16px;
-    color: #2E4BC0;
+    color: #1E307B;
     font-weight: bold;
     margin: 0px 0px 12px 0px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -22,8 +22,8 @@ ul {
 }
 
 ul li:hover {
-    cursor: pointer;
-    text-decoration: underline;
+    /* cursor: pointer; */
+    /* text-decoration: underline; */
 }
 
 ul li {
@@ -31,7 +31,8 @@ ul li {
     list-style: none;
     margin-bottom: 7px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #0073bb;
+    /* color: #0073bb; */
+    color: #333;
 }
 
 .footer-languages {
