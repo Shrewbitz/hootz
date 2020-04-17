@@ -20,7 +20,8 @@ class Api::RestaurantsController < ApplicationController
                 @restaurants = Restaurant.where(["address LIKE ?", "%#{search}%"])
             end    
             if @restaurants.length == 0
-              lower = search.downcase
+              lower = search.downcase.capitalize
+            
               x = Tag.find_by(["tag LIKE ?", "%#{lower}%"])
             #   debugger
               if x

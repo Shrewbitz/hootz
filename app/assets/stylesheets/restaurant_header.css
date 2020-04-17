@@ -124,6 +124,11 @@ justify-content: flex-end;
     
 }
 
+/* .input::-ms-clear {
+    width : 0;
+    height: 0;
+  } */
+
 .restaurant-searchbar-loc {
     width: 373px;
     padding-left: 11px;
