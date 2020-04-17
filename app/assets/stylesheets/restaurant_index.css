@@ -2,6 +2,7 @@
     /* height: 1000px; */
     width: 1200px;
     border-top: solid 1px #eeeeef;
+    min-height: 600px;
 }
 
 .link {

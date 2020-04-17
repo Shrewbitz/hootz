@@ -108,7 +108,7 @@ class Restaurant extends React.Component {
                         <div className="r-about">{this.state.restaurant.about}</div>
                         <div className="r-breakline"></div> 
                         <div className="r-section-label">Reviews</div>  
-                        <div className="r-reviews"> The food was great!</div>
+                        <div className="r-reviews"> </div>
                         <div className="r-breakline"></div> 
                                 <ReviewIndex wildcard={this.props.match.params.restaurantId}></ReviewIndex>
                         
@@ -124,7 +124,7 @@ class Restaurant extends React.Component {
                         </div>
                         <div className="r-directions">
                             <i className="fas fa-directions fa-lg"></i> 
-                            <a target="blank" href="https://www.google.com/maps"  className="r-sticky-label">Get Directions</a>
+                            <a target="blank" href={"https://www.google.com/maps/search/"+this.state.restaurant.name+" "+this.state.restaurant.address}  className="r-sticky-label">Get Directions</a>
                         </div>
                     </div>
                 </div>

@@ -63,7 +63,7 @@ class RestaurantIndex extends React.Component {
                                 <div className="ri-top-container">
                                     <div>{restaurant.name}</div>
                                     <div className="ri-line1">
-                                        <div className="ri-stars"> {this.state.stars.pop()}</div>
+                                        <div className="ri-stars"> {this.state.stars.shift()}</div>
                                         <div className="ri-count" >{restaurant.review_count}</div>
                                     </div>
                                 </div>

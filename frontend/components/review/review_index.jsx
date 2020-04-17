@@ -7,6 +7,7 @@ class ReviewIndex extends React.Component {
         super(props)
         // debugger
         this.state = {
+            stars: []
 
             // restaurants: []
         };
@@ -42,12 +43,7 @@ class ReviewIndex extends React.Component {
             // debugger
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.restaurants !== prevProps.props.restaurants ) {
-
-    //     }
-    // }
-
+  
 
     render() {
         // debugger
@@ -55,26 +51,45 @@ class ReviewIndex extends React.Component {
         if (this.props.reviews === undefined) {
             return <div>test</div>
         }
-        // debugger
+        
         const reviews = this.props.reviews
-        // this.state.restaurant.photos
-        let x = Object.values(reviews)
+
+
+        Object.values(reviews).map((review) => {
+            let rating = review.score 
+            let score = ( (rating === 5) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i></div> :
+            (rating >= 4.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i></div> :
+            (rating >= 4) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i></div> :
+            (rating >= 3.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i></div> :
+            (rating >= 3) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
+            (rating >= 2.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
+            (rating >= 2) ? <div><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
+            (rating >= 1.5) ? <div><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> :
+            <div><i className="fas fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i><i className="far fa-star"></i></div> );
+            this.state.stars.push(score)
+        })
+
+
+        // debugger
+
         // debugger
         return (
             <div className="empty-placeholder">
                 {
                     Object.values(reviews).map((review, idx) =>
-                    (<div key={idx} className="link">
-                        <div>
-                            {review.user.first_name}
+                    (<div key={idx} className="rev-box">
+                        <div className="user-box">
+                        <div className="user-name">{review.user.first_name} {review.user.last_name.slice(0,1)}.</div>
+                        <div className="user-info" ><div className="user-redstar"><i className="fas fa-star"></i></div> <strong>&nbsp;{review.review_count}&nbsp;</strong> reviews</div>
                         </div>
-                       
-                        <div>
-                            {review.user.last_name}    
-                        </div>
-                      
-                        <div>
-                            {review.body}
+                        <div className="feedback-box">
+                            <div className="feedback-top">
+                                <div className="user-redstar2">{this.state.stars.shift()}</div>
+                                <div className="user-date">{review.date}</div>
+                            </div>
+                            <div>
+                                {review.body}
+                            </div>
                         </div>
                          
                     </div>))

@@ -1,0 +1,52 @@
+.rev-box {
+    display: flex;
+    padding-top: 18px;
+    min-height: 108px;
+    border-bottom: solid 1px #e6e6e6;
+    width: 605px;
+}
+
+.user-box {
+    width: 150px;
+    padding-right: 18px;
+    /* display: flex; */
+}
+
+.feedback-box {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left; */
+    font-size: 14px;
+    
+}
+
+.user-info {
+    font-size: 14px;
+    display: flex;
+    color: #333;
+}
+
+.user-redstar {
+    font-size: 12px;
+    color: #d2323d;
+}
+
+.user-redstar2 {
+    color: #d2323d;
+    margin-right: 6px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.feedback-top {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.user-date {
+    color: #666;
+}
