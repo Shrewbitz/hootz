@@ -16,7 +16,7 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "run 'bundle exec rails server' then run 'npm run webpack' This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
