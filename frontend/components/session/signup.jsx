@@ -45,7 +45,7 @@ class Signup extends React.Component {
 
     handleClose(e) {
         e.preventDefault();
-        if (this.state.errors[1] < 7) {
+        if (this.state.errors == undefined || this.state.errors[1] < 7) {
         this.setState({errors: []})
         }
     }
