@@ -7,7 +7,8 @@ class SearchBar extends React.Component {
         super(props)
         this.state = {
             // restaurants: []
-            search: ''
+            search1: '',
+            search2: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this)
     };
@@ -35,10 +36,10 @@ class SearchBar extends React.Component {
         return (
                 <form className="nav-search">
                     <div className="psuedo-rest">Find</div>
-                    <input className="searchbar-rest" type="text" defaultValue="" placeholder="Restaurants" onChange={this.handleInput('search')}/>
+                    <input className="searchbar-rest" type="text" defaultValue="" placeholder="Restaurants" onChange={this.handleInput('search1')}/>
                     <div className="searchborder"></div>
                     <div className="psuedo-loc">Near</div>
-                    <input className="searchbar-loc"type="text"  placeholder="Location" onChange={this.handleInput('search')}/>
+                    <input className="searchbar-loc"type="text"  placeholder="Location" onChange={this.handleInput('search2')}/>
                     <button onClick={this.handleSubmit}><i className="fas fa-search fa-lg"></i></button>
                 </form>
         )

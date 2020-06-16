@@ -15,6 +15,6 @@ export const fetchRestaurants = () => (
 export const searchRestaurants = (search) => (
     $.ajax({
         method: 'get',
-        url: `/api/restaurants/search/${search.search}`,
+        url: `/api/restaurants/search/${search.search1 + "_" + search.search2}`,
     })
 )

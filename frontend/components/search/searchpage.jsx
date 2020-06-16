@@ -7,7 +7,8 @@ class SearchPageBar extends React.Component {
         super(props)
         this.state = {
             // restaurants: []
-            search: ''
+            search1: '',
+            search2: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this)
     };
@@ -23,7 +24,8 @@ class SearchPageBar extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.searchRestaurants(this.state).then (() => {
-            this.props.history.push('/search')})    
+                this.props.history.push('/search')
+        })    
     }
 
     //()  => this.props.history.push('/'), 
@@ -36,9 +38,9 @@ class SearchPageBar extends React.Component {
 
 
                             <form className="restaurant-nav-search">
-                                <input className="restaurant-searchbar-rest" type="text"  placeholder="Restaurants" onChange={this.handleInput('search')}/>
+                                <input className="restaurant-searchbar-rest" type="text"  placeholder="Restaurants" onChange={this.handleInput('search1')}/>
                                 <div className="restaurant-searchborder"></div>
-                                <input className="restaurant-searchbar-loc"type="text"  placeholder="Location" onChange={this.handleInput('search')}/>
+                                <input className="restaurant-searchbar-loc"type="text"  placeholder="Location" onChange={this.handleInput('search2')}/>
                                 <button onClick={this.handleSubmit}><i className="fas fa-search fa-lg"></i></button>
                             </form>
         )

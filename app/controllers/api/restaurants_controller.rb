@@ -11,24 +11,23 @@ class Api::RestaurantsController < ApplicationController
 
     def search 
         # debugger
-        search = params[:search]
-       
-    
-              @restaurants = Restaurant.where(["name LIKE ?", "%#{search}%"])  
-            #   debugger
-            if @restaurants.length == 0
-                @restaurants = Restaurant.where(["address LIKE ?", "%#{search}%"])
-            end    
-            if @restaurants.length == 0
-              lower = search.downcase.capitalize
-            
-              x = Tag.find_by(["tag LIKE ?", "%#{lower}%"])
-            #   debugger
-              if x
+        split_search = params[:search].split("_")
+        search1 = split_search[0]
+        search2 = split_search[1]
+        if  search1 != ""
+            @restaurants = Restaurant.where(["name LIKE ?", "%#{search1}%"])  
+        end
+        if search2 != nil
+            @restaurants = Restaurant.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
+        end    
+        if search1 != ""
+            lower = search1.downcase.capitalize
+            x = Tag.find_by(["tag LIKE ?", "%#{lower}%"])
+            if x
                 @restaurants = x.restaurants
-              end
             end
-        # end
+        end
+
         render :index
     end
 

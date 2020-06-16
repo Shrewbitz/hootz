@@ -38,7 +38,7 @@ class RestaurantIndex extends React.Component {
             this.state.stars.push(score)
         })
 
-        Object.values(restaurants).map((restaurant) => {
+        Object.values(restaurants).reverse().map((restaurant) => {
             let about = restaurant.about
             if (about === "none") {
                 this.state.about.push("")
