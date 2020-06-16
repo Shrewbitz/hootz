@@ -17,7 +17,6 @@ class Api::RestaurantsController < ApplicationController
         if  search1 != "" && search2 != nil
             @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"]).where(["lower(address) LIKE ?", "%#{search2.downcase}%"])  
         elsif search1 != "" && search1 != nil 
-            debugger
             @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"])
         end
         if search1 != "" && @restaurants.length == 0 && search1 != nil 
