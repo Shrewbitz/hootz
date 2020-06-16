@@ -84,6 +84,7 @@ justify-content: flex-end;
 .restaurant-nav-search button {
     transition: background-color .3s ease;
     background-color: #1E307B;
+    outline: none;
     color: white;
     border: none;
     width: 56px;

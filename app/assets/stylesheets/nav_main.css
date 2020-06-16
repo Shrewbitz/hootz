@@ -44,6 +44,10 @@
     height: 100%;
 }
 
+.m1-image:hover {
+    cursor: pointer;
+}
+
 .m1-label {
     width: 215.5px;
     height: 17px;
@@ -57,4 +61,8 @@
     background-color: white;
     border: 1px solid #e6e6e6;
     border-radius: 0 0 4px 4px;
+}
+
+.m1-label:hover {
+    cursor: pointer;
 }
