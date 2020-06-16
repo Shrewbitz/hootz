@@ -26,8 +26,10 @@
     height: 600px;
     background-image: url(https://images.unsplash.com/photo-1523634700860-90d0ef74f137?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2125&q=80);
     background-position: 20% 60%;
+    /* background-position: 40% 48%; */
     background-size: 2000px, 3000px; 
 }
+/* https://images.unsplash.com/photo-1523634700860-90d0ef74f137?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2125&q=80 */
 
 .nav-top {
     padding-top: 30px;
@@ -170,7 +172,7 @@
 
 .nav-search button {
     transition: background-color .6s ease;
-    background-color: #d32323;
+    background-color: #1E307B;
     color: white;
     border: none;
     padding: 14px 23px 13px 23px;
@@ -179,11 +181,11 @@
 
 .nav-search button:hover {
     transition: background-color .6s ease;
-    background-color: #b71301;
+    background-color: #12244E;
 }
 
 .nav-search button:active {
-    background-color: #8d0005;
+    background-color: #161A3E;
 
 }
 

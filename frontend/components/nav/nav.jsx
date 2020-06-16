@@ -19,6 +19,7 @@ class Nav extends React.Component {
 
     
    findSalad (e) {
+    window.scrollTo(0, 0);
         e.preventDefault();
         // debugger
         this.props.searchRestaurants({search: "vegetarian"}).then (() => {
@@ -27,6 +28,7 @@ class Nav extends React.Component {
    }
 
    findNoodles (e) {
+    window.scrollTo(0, 0);
         e.preventDefault();
         this.props.searchRestaurants({search: "noodles"}).then (() => {
             // debugger
@@ -34,6 +36,7 @@ class Nav extends React.Component {
     }
 
     findBurgers (e) {
+        window.scrollTo(0, 0);
         e.preventDefault();
         this.props.searchRestaurants({search: "burgers"}).then (() => {
             // debugger
@@ -41,6 +44,7 @@ class Nav extends React.Component {
     }
 
     findPizza (e) {
+        window.scrollTo(0, 0);
         e.preventDefault();
         this.props.searchRestaurants({search: "pizza"}).then (() => {
             // debugger

@@ -42,7 +42,7 @@
     color: #757280;
     font-size: 14px;
     font-weight: normal;
-    width: 600px;
+    width: 550px;
     margin-top: 8px;
     margin-left: 6px;
 }
@@ -63,7 +63,7 @@
 .ri-top-right {
     font-size: 12px;
     color: #757280;
-    width: 200px;
+    width: 250px;
     height: 40px;
     display: flex;
     flex-direction: column;
@@ -96,6 +96,6 @@
 }
 
 .ri-stars {
-    color: #E4574F;
+    color: #354262;
     width: 115px;
 }

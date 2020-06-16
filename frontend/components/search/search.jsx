@@ -35,10 +35,10 @@ class SearchBar extends React.Component {
         return (
                 <form className="nav-search">
                     <div className="psuedo-rest">Find</div>
-                    <input className="searchbar-rest" type="search" defaultValue="" placeholder="Restaurants" onChange={this.handleInput('search')}/>
+                    <input className="searchbar-rest" type="text" defaultValue="" placeholder="Restaurants" onChange={this.handleInput('search')}/>
                     <div className="searchborder"></div>
                     <div className="psuedo-loc">Near</div>
-                    <input className="searchbar-loc"type="search"  placeholder="Location" onChange={this.handleInput('search')}/>
+                    <input className="searchbar-loc"type="text"  placeholder="Location" onChange={this.handleInput('search')}/>
                     <button onClick={this.handleSubmit}><i className="fas fa-search fa-lg"></i></button>
                 </form>
         )
