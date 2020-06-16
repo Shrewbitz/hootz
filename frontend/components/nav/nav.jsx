@@ -22,7 +22,7 @@ class Nav extends React.Component {
     window.scrollTo(0, 0);
         e.preventDefault();
         // debugger
-        this.props.searchRestaurants({search: "vegetarian"}).then (() => {
+        this.props.searchRestaurants({search1: "vegetarian", search2: ""}).then (() => {
             // debugger
             this.props.history.push('/search')}) 
    }
@@ -30,7 +30,7 @@ class Nav extends React.Component {
    findNoodles (e) {
     window.scrollTo(0, 0);
         e.preventDefault();
-        this.props.searchRestaurants({search: "noodles"}).then (() => {
+        this.props.searchRestaurants({search1: "noodles", search2: ""}).then (() => {
             // debugger
             this.props.history.push('/search')}) 
     }
@@ -38,7 +38,7 @@ class Nav extends React.Component {
     findBurgers (e) {
         window.scrollTo(0, 0);
         e.preventDefault();
-        this.props.searchRestaurants({search: "burgers"}).then (() => {
+        this.props.searchRestaurants({search1: "burgers", search2: ""}).then (() => {
             // debugger
             this.props.history.push('/search')}) 
     }
@@ -46,8 +46,7 @@ class Nav extends React.Component {
     findPizza (e) {
         window.scrollTo(0, 0);
         e.preventDefault();
-        this.props.searchRestaurants({search: "pizza"}).then (() => {
-            // debugger
+        this.props.searchRestaurants({search1: "pizza", search2: ""}).then (() => {
             this.props.history.push('/search')}) 
     }
 

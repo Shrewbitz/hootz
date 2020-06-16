@@ -10,7 +10,6 @@ class Api::RestaurantsController < ApplicationController
     end
 
     def search 
-        # debugger
         split_search = params[:search].split("_")
         search1 = split_search[0]
         search2 = split_search[1]
