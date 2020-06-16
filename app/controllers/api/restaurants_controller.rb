@@ -16,10 +16,11 @@ class Api::RestaurantsController < ApplicationController
         @restaurants = []
         if  search1 != "" && search2 != nil
             @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"]).where(["lower(address) LIKE ?", "%#{search2.downcase}%"])  
-        elsif search1 != "" 
+        elsif search1 != "" && search1 != nil 
+            debugger
             @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"])
         end
-        if search1 != "" && @restaurants.length == 0
+        if search1 != "" && @restaurants.length == 0 && search1 != nil 
             lower = search1.downcase.capitalize
             x = Tag.find_by(["tag LIKE ?", "%#{lower}%"])
             
@@ -29,10 +30,9 @@ class Api::RestaurantsController < ApplicationController
                 @restaurants = x.restaurants
             end
         end
-            if search2 != nil && @restaurants.length == 0
-                @restaurants = Restaurant.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
-            end    
-
+        if search2 != nil && @restaurants.length == 0
+            @restaurants = Restaurant.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
+        end    
         render :index
     end
 
