@@ -14,19 +14,25 @@ class Api::RestaurantsController < ApplicationController
         split_search = params[:search].split("_")
         search1 = split_search[0]
         search2 = split_search[1]
-        if  search1 != ""
-            @restaurants = Restaurant.where(["name LIKE ?", "%#{search1}%"])  
+        @restaurants = []
+        if  search1 != "" && search2 != nil
+            @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"]).where(["lower(address) LIKE ?", "%#{search2.downcase}%"])  
+        elsif search1 != "" 
+            @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"])
         end
-        if search2 != nil
-            @restaurants = Restaurant.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
-        end    
-        if search1 != ""
+        if search1 != "" && @restaurants.length == 0
             lower = search1.downcase.capitalize
             x = Tag.find_by(["tag LIKE ?", "%#{lower}%"])
-            if x
+            
+            if x && search2 != nil
+                @restaurants = x.restaurants.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
+            elsif x
                 @restaurants = x.restaurants
             end
         end
+            if search2 != nil && @restaurants.length == 0
+                @restaurants = Restaurant.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
+            end    
 
         render :index
     end
