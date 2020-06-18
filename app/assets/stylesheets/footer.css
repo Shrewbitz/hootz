@@ -13,6 +13,12 @@
     font-weight: bold;
     margin: 0px 0px 12px 0px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+.footer-minilink {
+    text-decoration: none;
+    color: #666;
 }
 
 ul {

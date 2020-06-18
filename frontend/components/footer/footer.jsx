@@ -4,8 +4,8 @@ export default () => (
     <div className="footer">
         <div className="footer-top-container">
             <div className="footer-block">
-                <p className="footer-label">About</p>
-                <ul>
+            <a className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Portfolio Site <i class="fas fa-user"></i></a>
+                {/* <ul>
                     <li>About Hootz</li>
                     <li>Careers</li>
                     <li>Press</li>
@@ -15,11 +15,11 @@ export default () => (
                     <li>Privacy Policy</li>
                     <li>Ad Choices</li>
                     <li>This site is not protected by reCAPTCHA - See additional Privacy Policy and Terms</li>
-                </ul>
+                </ul> */}
             </div>
             <div className="footer-block">
-                <p className="footer-label">Discover</p>
-                <ul>
+            <a className="footer-label" target="blank" href="https://github.com/Shrewbitz">Github <i class="fab fa-github"></i></a> 
+                {/* 
                     <li>Hootz Project Cost Guides</li>
                     <li>Collections</li>
                     <li>Talk</li>
@@ -30,11 +30,11 @@ export default () => (
                     <li>Yelp Mobile</li>
                     <li>Developers</li>
                     <li>RSS</li>
-                </ul>
+                </ul> */}
             </div>
             <div className="footer-block">
-                <p className="footer-label">These do nothing at all</p>
-                <ul>
+            <a className="footer-label" target="blank" href="https://angel.co/u/samuel-gieseker">AngelList <i class="fab fa-angellist"></i></a>
+                {/* <ul>
                     <li>Claim your Business Page</li>
                     <li>Advertise on Hootz</li>
                     <li>Hootz Reservations</li>
@@ -43,19 +43,15 @@ export default () => (
                     <li>Business Success Stories</li>
                     <li>Business Support</li>
                     <li>Hootz Blog for Business Owners</li>
-                </ul>
+                </ul> */}
             </div>
             <div className="footer-block">
                 <div className="footer-languages">
-                    <p className="footer-label">Languages</p>
+                    <p className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Projects <i class="fas fa-code"></i></p>
+                    {/* <a className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Projects <i class="fab fa-angellist"></i></a> */}
                     <ul>
-                        <li>English</li>
-                    </ul>
-                </div>
-                <div className="footer-countries">
-                    <p className="footer-label">Countries</p>
-                    <ul>
-                        <li>United States</li>
+                    <li><a target="blank" className="footer-minilink" href="https://shrewbitz.github.io/wright/">Wright <i class="fas fa-globe"></i></a></li>
+                    <li><a target="blank" className="footer-minilink" href="http://haiclue.herokuapp.com/#/">Haiclue <i class="fas fa-gamepad"></i></a></li>
                     </ul>
                 </div>
             </div>
