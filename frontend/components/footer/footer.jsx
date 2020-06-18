@@ -4,7 +4,7 @@ export default () => (
     <div className="footer">
         <div className="footer-top-container">
             <div className="footer-block">
-            <a className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Portfolio Site <i class="fas fa-user"></i></a>
+            <a className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Portfolio Site <i className="fas fa-user"></i></a>
                 {/* <ul>
                     <li>About Hootz</li>
                     <li>Careers</li>
@@ -18,7 +18,7 @@ export default () => (
                 </ul> */}
             </div>
             <div className="footer-block">
-            <a className="footer-label" target="blank" href="https://github.com/Shrewbitz">Github <i class="fab fa-github"></i></a> 
+            <a className="footer-label" target="blank" href="https://github.com/Shrewbitz">Github <i className="fab fa-github"></i></a> 
                 {/* 
                     <li>Hootz Project Cost Guides</li>
                     <li>Collections</li>
@@ -33,7 +33,7 @@ export default () => (
                 </ul> */}
             </div>
             <div className="footer-block">
-            <a className="footer-label" target="blank" href="https://angel.co/u/samuel-gieseker">AngelList <i class="fab fa-angellist"></i></a>
+            <a className="footer-label" target="blank" href="https://angel.co/u/samuel-gieseker">AngelList <i className="fab fa-angellist"></i></a>
                 {/* <ul>
                     <li>Claim your Business Page</li>
                     <li>Advertise on Hootz</li>
@@ -47,17 +47,17 @@ export default () => (
             </div>
             <div className="footer-block">
                 <div className="footer-languages">
-                    <p className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Projects <i class="fas fa-code"></i></p>
+                    <p className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Projects <i className="fas fa-code"></i></p>
                     {/* <a className="footer-label" target="blank" href="https://shrewbitz.github.io/wright/">Projects <i class="fab fa-angellist"></i></a> */}
                     <ul>
-                    <li><a target="blank" className="footer-minilink" href="https://shrewbitz.github.io/wright/">Wright <i class="fas fa-globe"></i></a></li>
-                    <li><a target="blank" className="footer-minilink" href="http://haiclue.herokuapp.com/#/">Haiclue <i class="fas fa-gamepad"></i></a></li>
+                    <li><a target="blank" className="footer-minilink" href="https://shrewbitz.github.io/wright/">Wright <i className="fas fa-globe"></i></a></li>
+                    <li><a target="blank" className="footer-minilink" href="http://haiclue.herokuapp.com/#/">Haiclue <i className="fas fa-gamepad"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div className="footer-bottom-container">
-            <div className="footer-city-list">
+            {/* <div className="footer-city-list">
                 <ul>
                     <li className="footer-site-map">Site Map</li>
                     <li className="footer-atl">Atlanta</li>
@@ -83,7 +83,7 @@ export default () => (
                     <li className="footer-city">Washington, DC</li>
                     <li className="footer-city">More Cities</li>
                 </ul>
-            </div>
+            </div> */}
             <div className="footer-pic">
                 <img src={window.city}/>
             </div>
