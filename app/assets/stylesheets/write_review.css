@@ -1,0 +1,52 @@
+.rating-form {
+    display: flex;
+    flex-direction: row-reverse;
+    float: left;
+
+}
+
+.rating-form div {
+    width: 30px;
+    height: 30px;
+    border: solid 2px black;
+    background-color: gray;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.rate1:hover {
+    background-color: yellow;
+}
+
+
+.rate2:hover, .rate2:hover ~ .rate1 { 
+    background-color: goldenrod;
+}  
+
+.rate3:hover, .rate3:hover ~ .rate1, .rate3:hover ~  .rate2  {
+    background-color: peru;
+}
+
+.rate4:hover, .rate4:hover ~ .rate1, .rate4:hover ~ .rate2, .rate4:hover ~ .rate3  {
+    background-color: orangered;
+}
+
+.rate5:hover, .rate5:hover ~ .rate4, .rate5:hover ~ .rate3, .rate5:hover ~ .rate2, .rate5:hover ~ .rate1{
+    background-color: red;
+}
+
+.review-box {
+    width: 625px;
+    height: 581px;
+    
+}
+
+.review-box-inner textarea{
+ width: 587px;
+height: 258px;
+}
+
+.review-center {
+    display: flex;
+    justify-content: center;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewIndex from '../review/review_index_container'
+import WriteReview from '../review/write_review_container'
 
 class Restaurant extends React.Component {
     constructor(props) {
@@ -131,6 +132,7 @@ class Restaurant extends React.Component {
             </div>
             {/* <img src={this.state.restaurant.photoURL}/> */}
 
+            <div><WriteReview></WriteReview></div>
         </div>
         )
     }
