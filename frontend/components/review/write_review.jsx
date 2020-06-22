@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { debug } from 'webpack';
 
 class WriteReview extends React.Component {
 
@@ -8,11 +9,13 @@ class WriteReview extends React.Component {
         // debugger
         this.state = {
             rating: 0,
+            text: "",
+            errors: this.props.errors,
 
         };
         // this.render = this.render.bind(this)
         // this.componentDidMount = this.componentDidMount.bind(this)
-        this.rate1 = this.rate1.bind(this)
+        // this.rate1 = this.rate1.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this);
     };
 
@@ -69,16 +72,19 @@ class WriteReview extends React.Component {
 
     handleInput(type) {
         return(e) => {
-            this.setState({[type]: e.target.value})
+            this.setState({text: e.target.value})
         };
     };
   
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.signup(this.state)
-        
-        
+        // debugger
+        this.props.postReview(this.state)
+        // .then(() => this.props.history.push('/')
+        // , dberrors => { 
+        //     this.setState({errors: dberrors.errors});
+        // })   
     };
 
     render() {
@@ -95,7 +101,7 @@ class WriteReview extends React.Component {
                             <div onClick={this.rate2} id="rate2" className="rate2">2</div>
                             <div onClick={this.rate1}  id="rate1" className="rate1">1</div>
                         </div>
-                        <textarea onChange={this.handleInput()} placeholder="If you want to find the world’s best street burrito, look no further. Whenever I’m craving a California burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There’s so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."/>
+                        <textarea onChange={this.handleInput()} value={this.state.text} placeholder="If you want to find the world’s best street burrito, look no further. Whenever I’m craving a California burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There’s so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."/>
                     </div>
                     <button className="login-submit" onClick={this.handleSubmit}>Post Review</button>
                 </form>

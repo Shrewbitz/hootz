@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import write_review from './write_review';
-import {fetchReviews} from '../../actions/review_actions'
+import {postReview} from '../../actions/review_actions'
 const msp = (state, ownProps) => {
     // debugger
     return {
@@ -11,7 +11,7 @@ const msp = (state, ownProps) => {
 };
 
 const mdp = dispatch => ({
-    fetchReviews: (restaurant_id) => dispatch(fetchReviews(restaurant_id)),
+    postReview: (restaurant_id) => dispatch(postReview(restaurant_id)),
 })
 
 export default connect(msp, mdp)(write_review)
