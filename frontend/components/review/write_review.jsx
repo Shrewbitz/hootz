@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { debug } from 'webpack';
 
 class WriteReview extends React.Component {
 
@@ -92,7 +91,7 @@ class WriteReview extends React.Component {
         return (
         <div className="review-center">
             <div className="review-box">
-                <form action="" method="post">
+                <form action="" method="post" onSubmit={this.handleSubmit}>
                     <div className="review-box-inner">
                         <div className="rating-form">
                             <div onClick={this.rate5}  id="rate5"  className="rate5">5</div>
