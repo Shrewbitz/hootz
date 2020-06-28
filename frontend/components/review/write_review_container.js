@@ -6,7 +6,8 @@ const msp = (state, ownProps) => {
     return {
     ownProps: ownProps,
     reviews: state.entities.reviews,
-    restaurants: state.entities.restaurant
+    restaurants: state.entities.restaurant,
+    session: state.session
     }
 };
 

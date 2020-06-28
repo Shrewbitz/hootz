@@ -7,9 +7,11 @@ class WriteReview extends React.Component {
         super(props)
         // debugger
         this.state = {
-            rating: 0,
-            text: "",
+            score: 0,
+            body: "",
             errors: this.props.errors,
+            user_id: this.props.session.id,
+            restaurant_id: window.location.hash.split("/")[2]
 
         };
         // this.render = this.render.bind(this)
@@ -26,7 +28,7 @@ class WriteReview extends React.Component {
         document.getElementById("rate3").style.backgroundColor="gray";  
         document.getElementById("rate4").style.backgroundColor="gray";  
         document.getElementById("rate5").style.backgroundColor="gray";  
-        () => {this.setState({rating: 1})}
+        () => {this.setState({score: 1})}
     }
 
     rate2(e) {
@@ -36,7 +38,7 @@ class WriteReview extends React.Component {
         document.getElementById("rate3").style.backgroundColor="gray";  
         document.getElementById("rate4").style.backgroundColor="gray";  
         document.getElementById("rate5").style.backgroundColor="gray";   
-        () => {this.setState({rating: 2})}   
+        () => {this.setState({score: 2})}   
     }
 
     rate3(e) {
@@ -46,7 +48,7 @@ class WriteReview extends React.Component {
         document.getElementById("rate3").style.backgroundColor="peru";  
         document.getElementById("rate4").style.backgroundColor="gray";  
         document.getElementById("rate5").style.backgroundColor="gray"; 
-        () => {this.setState({rating: 3})} 
+        () => {this.setState({score: 3})} 
     }
 
     rate4(e) {
@@ -56,7 +58,7 @@ class WriteReview extends React.Component {
         document.getElementById("rate3").style.backgroundColor="orangered";
         document.getElementById("rate4").style.backgroundColor="orangered";  
         document.getElementById("rate5").style.backgroundColor="gray";    
-        () => {this.setState({rating: 4})}
+        () => {this.setState({score: 4})}
     }
 
     rate5(e) {
@@ -66,12 +68,12 @@ class WriteReview extends React.Component {
         document.getElementById("rate3").style.backgroundColor="red"; 
         document.getElementById("rate4").style.backgroundColor="red"; 
         document.getElementById("rate5").style.backgroundColor="red";     
-        () => {this.setState({rating: 5})}
+        () => {this.setState({score: 5})}
     }
 
     handleInput(type) {
         return(e) => {
-            this.setState({text: e.target.value})
+            this.setState({body: e.target.value})
         };
     };
   
@@ -100,7 +102,7 @@ class WriteReview extends React.Component {
                             <div onClick={this.rate2} id="rate2" className="rate2">2</div>
                             <div onClick={this.rate1}  id="rate1" className="rate1">1</div>
                         </div>
-                        <textarea onChange={this.handleInput()} value={this.state.text} placeholder="If you want to find the world’s best street burrito, look no further. Whenever I’m craving a California burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There’s so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."/>
+                        <textarea onChange={this.handleInput()} value={this.state.body} placeholder="If you want to find the world’s best street burrito, look no further. Whenever I’m craving a California burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There’s so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."/>
                     </div>
                     <button className="login-submit" onClick={this.handleSubmit}>Post Review</button>
                 </form>
