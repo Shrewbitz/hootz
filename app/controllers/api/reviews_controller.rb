@@ -11,9 +11,15 @@ class Api::ReviewsController < ApplicationController
     end
     
     def create
-        # debugger
         @review = Review.new(review_params)
-        if @review.save
+        @doubles = Review.where(restaurant_id: params[:restaurant_id]).where(user_id: review_params[:user_id])
+        # if @doubles.length > 0
+        #     render json: ["You have already written a review"], status: 987
+        if @review.save 
+            @doubles[0...-1].each do |double|
+                double.delete
+            end
+            @reviews = Review.where(restaurant_id: params[:restaurant_id])
             render :index
         else 
             render json: ["You are missing something from the review."], status: 42069
