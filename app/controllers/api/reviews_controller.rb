@@ -15,6 +15,9 @@ class Api::ReviewsController < ApplicationController
         @doubles = Review.where(restaurant_id: params[:restaurant_id]).where(user_id: review_params[:user_id])
         # if @doubles.length > 0
         #     render json: ["You have already written a review"], status: 987
+        if !@review.user_id
+            return render json: ["You are not logged in."], status: 2020
+        end
         if @review.save 
             @doubles[0...-1].each do |double|
                 double.delete
