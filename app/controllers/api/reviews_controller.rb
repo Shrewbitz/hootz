@@ -17,12 +17,13 @@ class Api::ReviewsController < ApplicationController
         if !@review.user_id
             return render json: ["You are not logged in."], status: 2020
         end
-        if @review.save 
+        if @review.save! 
             @doubles[0...-1].each do |double|
                 double.delete
             end
             @reviews = Review.where(restaurant_id: params[:restaurant_id])
-            render :show # wrong approach probs bring back index
+            # render :show # wrong approach probs bring back index
+            render :show
         else 
             render json: ["You are missing something from the review."], status: 42069
         end

@@ -8,16 +8,26 @@
 .rating-form div {
     width: 30px;
     height: 30px;
-    border: solid 2px black;
-    background-color: gray;
-    margin: 5px;
+    background-color: rgb(195, 195, 195);
+    margin: 2px;
+    font-size: 22px;
+    padding-top: 5px;
+    padding-left: 5px;
     border-radius: 5px;
+}
+
+#rate-text {
+    padding-top: 10px;
+    margin-left: 202px;
+}
+
+.rate1, .rate2, .rate3, .rate4, .rate5 {
+    color: white;
 }
 
 .rate1:hover {
     background-color: yellow;
 }
-
 
 .rate2:hover, .rate2:hover ~ .rate1 { 
     background-color: goldenrod;
