@@ -78,13 +78,16 @@ class WriteReview extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // debugger
+        debugger
         this.props.postReview(this.state)
-        // .then(() => this.props.history.push('/')
-        // , dberrors => { 
-        //     this.setState({errors: dberrors.errors});
-        // })   
+        .then(() => {
+            debugger
+            this.props.history.push(`/restaurant/${this.state.restaurant_id}`)
+        });
     };
+            // , dberrors => { 
+            //     this.setState({errors: dberrors.errors});
+            // })   
 
     render() {
 

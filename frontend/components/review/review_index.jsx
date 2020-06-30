@@ -18,9 +18,9 @@ class ReviewIndex extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-        // debugger
         // this.props.fetchReviews(10)
         this.props.fetchReviews((this.props.wildcard))
+        // debugger
         // .then(restaurants => {
         //         this.setState({restaurants: restaurants.restaurants})
         //     });;
@@ -79,7 +79,7 @@ class ReviewIndex extends React.Component {
                     Object.values(reviews).map((review, idx) =>
                     (<div key={idx} className="rev-box">
                         <div className="user-box">
-                            {review.user ? <div></div> : window.location.reload()}
+                            {/* {review.user ? <div></div> : window.location.reload()} */}
                             {/* not a real fix */}
                         <div className="user-name">{review.user.first_name} {review.user.last_name.slice(0,1)}.</div>
                         <div className="user-info" ><div className="user-redstar"><i className="fas fa-star"></i></div> <strong>&nbsp;{review.review_count}&nbsp;</strong> reviews</div>

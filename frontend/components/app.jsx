@@ -8,6 +8,7 @@ import RestaurantIndexContainer from "./restaurant/restaurant_index_container"
 import RestaurantShowContainer from './restaurant/restaurant_container'
 import RestaurantHeaderContainer from './restaurant/restaurant_header_container'
 import ReviewIndexContainer from "./review/review_index_container"
+import WriteReviewContainer from "./review/write_review_container"
 import SignupHeader from './signup_header/signup_header'
 import Footer from './footer/footer'
 import {AuthRoute} from '../util/route_utils'
@@ -23,9 +24,11 @@ const App = () => (
         <Route path="/signup" component={SignupHeader}/>
         <AuthRoute path="/signup" component={SignupContainer}/>
         <Route path="/restaurants/" component={RestaurantHeaderContainer}/>
-        <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer}/>
+        <Route path="/restaurant/" component={RestaurantHeaderContainer}/>
+        <Route exact path="/restaurant/:restaurantId" component={RestaurantShowContainer}/>
         <Route path="/search" component={RestaurantHeaderContainer}/>
         <Route exact path="/search" component={RestaurantIndexContainer}/>
+        <Route exact path="/restaurant/:restaurantId/reviews/create"  component={WriteReviewContainer}/>
         <Route path="/" component={Footer}/>
     </div>
 )

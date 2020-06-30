@@ -13,8 +13,7 @@ class Api::ReviewsController < ApplicationController
     def create
         @review = Review.new(review_params)
         @doubles = Review.where(restaurant_id: params[:restaurant_id]).where(user_id: review_params[:user_id])
-        # if @doubles.length > 0
-        #     render json: ["You have already written a review"], status: 987
+   
         if !@review.user_id
             return render json: ["You are not logged in."], status: 2020
         end
@@ -23,7 +22,7 @@ class Api::ReviewsController < ApplicationController
                 double.delete
             end
             @reviews = Review.where(restaurant_id: params[:restaurant_id])
-            render :index
+            render :show # wrong approach probs bring back index
         else 
             render json: ["You are missing something from the review."], status: 42069
         end

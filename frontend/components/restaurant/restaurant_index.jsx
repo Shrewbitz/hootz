@@ -54,7 +54,7 @@ class RestaurantIndex extends React.Component {
             <div className="ri-container">
                 {
                     Object.values(restaurants).map((restaurant, idx) =>
-                    (<Link key={idx} className="link" to={`/restaurants/${restaurant.id}`}>
+                    (<Link key={idx} className="link" to={`/restaurant/${restaurant.id}`}>
                         <div className="thumbnail-container">
                             <img className="thumbnail"  src={restaurant.photos[0]}/>
                         </div>

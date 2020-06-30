@@ -98,7 +98,9 @@ class Restaurant extends React.Component {
                                 </div>
                             </div>
                             <div className="r-info">
-                                <div className="r-top-review"><i className="fas fa-star"></i> Write a Review</div>
+                                    <Link className="r-top-review" to={`/restaurant/${this.state.restaurant.id}/reviews/create`}>
+                                        <i className="fas fa-star"></i> Write a Review
+                                    </Link>
                             </div>
                         </div>
                         <div className="r-breakline"></div>
@@ -111,7 +113,8 @@ class Restaurant extends React.Component {
                         <div className="r-section-label">Reviews</div>  
                         <div className="r-reviews"> </div>
                         <div className="r-breakline"></div> 
-                                <ReviewIndex wildcard={this.props.match.params.restaurantId}></ReviewIndex>
+                                {/* <ReviewIndex wildcard={this.props.match.params.restaurantId}></ReviewIndex> */}
+                                <ReviewIndex wildcard={this.state.restaurant.id}></ReviewIndex>
                         
                     </div>
                     <div className="r-sticky-info">
@@ -132,7 +135,7 @@ class Restaurant extends React.Component {
             </div>
             {/* <img src={this.state.restaurant.photoURL}/> */}
 
-            <div><WriteReview></WriteReview></div>
+            {/* <div><WriteReview></WriteReview></div> */}
         </div>
         )
     }

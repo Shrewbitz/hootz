@@ -96,6 +96,7 @@
     padding: 7px 8px 8px 8px;
     border: solid 1px #ccc;
     border-radius: 4px;
+    text-decoration: none;
 }
 
 .r-top-review:hover {
@@ -104,6 +105,9 @@
     border: solid 1px #fcdedc;
     cursor: pointer;
 }
+
+
+
 
 .r-breakline {
     border-bottom: solid 1px #e6e6e6;
