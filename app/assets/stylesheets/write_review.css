@@ -25,7 +25,7 @@
     color: white;
 }
 
-.rate1:hover {
+/* .rate1:hover {
     background-color: yellow;
 }
 
@@ -43,7 +43,7 @@
 
 .rate5:hover, .rate5:hover ~ .rate4, .rate5:hover ~ .rate3, .rate5:hover ~ .rate2, .rate5:hover ~ .rate1{
     background-color: red;
-}
+} */
 
 .review-box {
     width: 625px;
