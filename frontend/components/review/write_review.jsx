@@ -19,8 +19,15 @@ class WriteReview extends React.Component {
         // this.rate1 = this.rate1.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this);
         this.rate = this.rate.bind(this); 
+        this.rateLeave = this.rateLeave.bind(this);
+        this.rateHover = this.rateHover.bind(this);
     };
 
+    componentDidMount() {
+        this.props.fetchRestaurant(this.props.match.params.restaurantId).then(restaurant => {
+            this.setState({restaurant: restaurant.restaurant})
+        });
+    }
 
     rateHover(e) {
         e.preventDefault();
@@ -72,9 +79,8 @@ class WriteReview extends React.Component {
     }
 
     rateLeave(e) {
-        // e.preventDefault();
-        debugger
-        let rating = e;
+        e.preventDefault();
+        let rating = this.state.score;
         switch (rating) {
             case 5:
                 document.getElementById("rate1").style.backgroundColor="red"; 
@@ -116,15 +122,14 @@ class WriteReview extends React.Component {
                 document.getElementById("rate5").style.backgroundColor="gray"; 
                 document.getElementById("rate-text").innerHTML="Eek! Methinks not."; 
                 break;
-            // case 0:
-            //     debugger
-            //     document.getElementById("rate1").style.backgroundColor="gray";   
-            //     document.getElementById("rate2").style.backgroundColor="gray";  
-            //     document.getElementById("rate3").style.backgroundColor="gray";  
-            //     document.getElementById("rate4").style.backgroundColor="gray";  
-            //     document.getElementById("rate5").style.backgroundColor="gray"; 
-            //     document.getElementById("rate-text").innerHTML="Select your rating"; 
-            //     break;
+            case 0:
+                document.getElementById("rate1").style.backgroundColor="gray";   
+                document.getElementById("rate2").style.backgroundColor="gray";  
+                document.getElementById("rate3").style.backgroundColor="gray";  
+                document.getElementById("rate4").style.backgroundColor="gray";  
+                document.getElementById("rate5").style.backgroundColor="gray"; 
+                document.getElementById("rate-text").innerHTML="Select your rating"; 
+                break;
             default:
                 break;
         }
@@ -199,18 +204,20 @@ class WriteReview extends React.Component {
             // })   
 
     render() {
-
+        // debugger
+        let name = this.props.restaurants[this.state.restaurant_id] ? this.props.restaurants[this.state.restaurant_id].name : <div></div>;
         return (
         <div className="review-center">
             <div className="review-box">
+                <Link className="return-to-restaurant" to={`/restaurant/${this.state.restaurant_id}`}>{name}</Link>
                 <form action="" method="post" onSubmit={this.handleSubmit}>
                     <div className="review-box-inner">
                         <div className="rating-form">
-                            <div onClick={this.rate} onMouseEnter={this.rateHover}  onMouseLeave={this.rateLeave(this.state.score)} id="rate5" value="5" className="rate5"><i className="fas fa-star"></i></div>
-                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave(this.state.score)} id="rate4" value="4" className="rate4"><i className="fas fa-star"></i></div>
-                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave(this.state.score)}  id="rate3" value="3" className="rate3"><i className="fas fa-star"></i></div>
-                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave(this.state.score)} id="rate2" value="2" className="rate2"><i className="fas fa-star"></i></div>
-                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave(this.state.score)} id="rate1" value="1" className="rate1"><i className="fas fa-star"></i></div>
+                            <div onClick={this.rate} onMouseEnter={this.rateHover}  onMouseLeave={this.rateLeave} id="rate5" value="5" className="rate5"><i className="fas fa-star"></i></div>
+                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave} id="rate4" value="4" className="rate4"><i className="fas fa-star"></i></div>
+                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave}  id="rate3" value="3" className="rate3"><i className="fas fa-star"></i></div>
+                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave} id="rate2" value="2" className="rate2"><i className="fas fa-star"></i></div>
+                            <div onClick={this.rate} onMouseEnter={this.rateHover} onMouseLeave={this.rateLeave} id="rate1" value="1" className="rate1"><i className="fas fa-star"></i></div>
                         </div>
                             <div id="rate-text">Select your rating</div>
                         <textarea onChange={this.handleInput()} value={this.state.body} placeholder="If you want to find the world’s best street burrito, look no further. Whenever I’m craving a California burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There’s so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."/>

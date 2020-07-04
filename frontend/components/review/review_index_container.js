@@ -12,6 +12,7 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => ({
     fetchReviews: (restaurant_id) => dispatch(fetchReviews(restaurant_id)),
+   
 })
 
 export default connect(msp, mdp)(review_index)

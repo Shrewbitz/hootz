@@ -25,6 +25,20 @@
     color: white;
 }
 
+.return-to-restaurant {
+    font-size: 40px;
+    line-height: 1.16667em;
+    font-weight: 700;
+    color: #0073bb;
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+
+.return-to-restaurant:hover {
+    border-bottom: 3px solid #0073bb;
+    /* text-decoration: #0073bb; */
+}
+
 /* .rate1:hover {
     background-color: yellow;
 }
