@@ -62,11 +62,17 @@
 .review-box {
     width: 625px;
     height: 581px;
+    margin-bottom: 100px;
 
     
 }
 
 .review-box-inner textarea{
+    padding-top: 20px;
+    font-size: 18px;
+    /* color: rgb(195, 195, 195); */
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1.44em;
  width: 587px;
 height: 258px;
 border: none;
@@ -77,13 +83,20 @@ outline: none;
 .review-box-inner {
     border: rgb(195, 195, 195) solid 1px;
     border-radius: 5px;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 18px;
     margin-top: 20px;
     margin-bottom: 30px;
+    height: 345px;
+    width: 587px;
 }
 
 .review-center {
     display: flex;
     justify-content: center;
+}
+
+.login-submit {
+    width: 240px;
+    height: 48px;
+    outline: none;
 }
