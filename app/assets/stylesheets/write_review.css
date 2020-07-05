@@ -62,12 +62,25 @@
 .review-box {
     width: 625px;
     height: 581px;
+
     
 }
 
 .review-box-inner textarea{
  width: 587px;
 height: 258px;
+border: none;
+resize: none;
+outline: none;
+}
+
+.review-box-inner {
+    border: rgb(195, 195, 195) solid 1px;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .review-center {
