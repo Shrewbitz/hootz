@@ -46,7 +46,6 @@ class ReviewIndex extends React.Component {
 
     deleteReview(e) {
         let review = {id: Number(e.currentTarget.getAttribute('value')), restaurant_id: this.props.wildcard}
-        // debugger
         this.props.deleteReview(review);
     }
 
