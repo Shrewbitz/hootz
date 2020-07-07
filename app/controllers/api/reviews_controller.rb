@@ -31,6 +31,15 @@ class Api::ReviewsController < ApplicationController
     
     # Review.find_by(restaurant_id: "37")
 
+    def destroy
+        # debugger
+        if  @review = Review.find(params[:id])
+            restaurant = @review.restaurant_id
+            @review.delete
+            @reviews = Review.where(restaurant_id: restaurant)
+            render :show
+        end
+    end
 
     def review_params
         params.require(:review).permit(:id, :body, :score, :user_id, :restaurant_id, :data)

@@ -50,3 +50,18 @@
 .user-date {
     color: #666;
 }
+
+.delete-review {
+    position: relative;
+    left: 270px;
+    font-size: 20px;
+    /* color: rgb(195, 195, 195);*/
+    /* color: #999 */
+    color: #354262;
+
+}
+
+.delete-review:hover {
+    color: #0c1331;
+    cursor: pointer;
+}

@@ -34,39 +34,39 @@ class WriteReview extends React.Component {
         let rating = Number(e.currentTarget.getAttribute('value'));
         switch (rating) {
             case 5:
-                document.getElementById("rate1").style.backgroundColor="red"; 
-                document.getElementById("rate2").style.backgroundColor="red"; 
-                document.getElementById("rate3").style.backgroundColor="red"; 
-                document.getElementById("rate4").style.backgroundColor="red"; 
-                document.getElementById("rate5").style.backgroundColor="red";
+                document.getElementById("rate1").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate2").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate3").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate4").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate5").style.backgroundColor="rgb(211,35,35)";
                 document.getElementById("rate-text").innerHTML="Woohoo! As good as it gets!";  
                 break;
             case 4:
-                document.getElementById("rate1").style.backgroundColor="orangered";
-                document.getElementById("rate2").style.backgroundColor="orangered";
-                document.getElementById("rate3").style.backgroundColor="orangered";
-                document.getElementById("rate4").style.backgroundColor="orangered";  
+                document.getElementById("rate1").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate2").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate3").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate4").style.backgroundColor="rgb(239,91,79)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)";
                 document.getElementById("rate-text").innerHTML="Yay! I'm a fan.";  
                 break;
             case 3:
-                document.getElementById("rate1").style.backgroundColor="peru";   
-                document.getElementById("rate2").style.backgroundColor="peru";   
-                document.getElementById("rate3").style.backgroundColor="peru";  
+                document.getElementById("rate1").style.backgroundColor="rgb(241,146,66)";   
+                document.getElementById("rate2").style.backgroundColor="rgb(241,146,66)";   
+                document.getElementById("rate3").style.backgroundColor="rgb(241,146,66)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)"; 
                 document.getElementById("rate-text").innerHTML="A-OK."; 
                 break;   
             case 2:
-                document.getElementById("rate1").style.backgroundColor="goldenrod";
-                document.getElementById("rate2").style.backgroundColor="goldenrod";  
+                document.getElementById("rate1").style.backgroundColor="rgb(244,192,19)";
+                document.getElementById("rate2").style.backgroundColor="rgb(244,192,19)";  
                 document.getElementById("rate3").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)";
                 document.getElementById("rate-text").innerHTML="Meh! I've experienced better."; 
                 break;  
             case 1:
-                document.getElementById("rate1").style.backgroundColor="yellow";   
+                document.getElementById("rate1").style.backgroundColor="rgb(242,189,120)";   
                 document.getElementById("rate2").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate3").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
@@ -83,39 +83,39 @@ class WriteReview extends React.Component {
         let rating = this.state.score;
         switch (rating) {
             case 5:
-                document.getElementById("rate1").style.backgroundColor="red"; 
-                document.getElementById("rate2").style.backgroundColor="red"; 
-                document.getElementById("rate3").style.backgroundColor="red"; 
-                document.getElementById("rate4").style.backgroundColor="red"; 
-                document.getElementById("rate5").style.backgroundColor="red";
+                document.getElementById("rate1").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate2").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate3").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate4").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate5").style.backgroundColor="rgb(211,35,35)";
                 document.getElementById("rate-text").innerHTML="Woohoo! As good as it gets!";  
                 break;
             case 4:
-                document.getElementById("rate1").style.backgroundColor="orangered";
-                document.getElementById("rate2").style.backgroundColor="orangered";
-                document.getElementById("rate3").style.backgroundColor="orangered";
-                document.getElementById("rate4").style.backgroundColor="orangered";  
+                document.getElementById("rate1").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate2").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate3").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate4").style.backgroundColor="rgb(239,91,79)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)";
                 document.getElementById("rate-text").innerHTML="Yay! I'm a fan.";  
                 break;
             case 3:
-                document.getElementById("rate1").style.backgroundColor="peru";   
-                document.getElementById("rate2").style.backgroundColor="peru";   
-                document.getElementById("rate3").style.backgroundColor="peru";  
+                document.getElementById("rate1").style.backgroundColor="rgb(241,146,66)";   
+                document.getElementById("rate2").style.backgroundColor="rgb(241,146,66)";   
+                document.getElementById("rate3").style.backgroundColor="rgb(241,146,66)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)"; 
                 document.getElementById("rate-text").innerHTML="A-OK."; 
                 break;   
             case 2:
-                document.getElementById("rate1").style.backgroundColor="goldenrod";
-                document.getElementById("rate2").style.backgroundColor="goldenrod";  
+                document.getElementById("rate1").style.backgroundColor="rgb(244,192,19)";
+                document.getElementById("rate2").style.backgroundColor="rgb(244,192,19)";  
                 document.getElementById("rate3").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)";
                 document.getElementById("rate-text").innerHTML="Meh! I've experienced better."; 
                 break;  
             case 1:
-                document.getElementById("rate1").style.backgroundColor="yellow";   
+                document.getElementById("rate1").style.backgroundColor="rgb(242,189,120)";   
                 document.getElementById("rate2").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate3").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
@@ -140,39 +140,39 @@ class WriteReview extends React.Component {
         let rating = Number(e.currentTarget.getAttribute('value'));
         switch (rating) {
             case 5:
-                document.getElementById("rate1").style.backgroundColor="red"; 
-                document.getElementById("rate2").style.backgroundColor="red"; 
-                document.getElementById("rate3").style.backgroundColor="red"; 
-                document.getElementById("rate4").style.backgroundColor="red"; 
-                document.getElementById("rate5").style.backgroundColor="red";
+                document.getElementById("rate1").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate2").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate3").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate4").style.backgroundColor="rgb(211,35,35)"; 
+                document.getElementById("rate5").style.backgroundColor="rgb(211,35,35)";
                 document.getElementById("rate-text").innerHTML="Woohoo! As good as it gets!";  
                 break;
             case 4:
-                document.getElementById("rate1").style.backgroundColor="orangered";
-                document.getElementById("rate2").style.backgroundColor="orangered";
-                document.getElementById("rate3").style.backgroundColor="orangered";
-                document.getElementById("rate4").style.backgroundColor="orangered";  
+                document.getElementById("rate1").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate2").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate3").style.backgroundColor="rgb(239,91,79)";
+                document.getElementById("rate4").style.backgroundColor="rgb(239,91,79)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)";
                 document.getElementById("rate-text").innerHTML="Yay! I'm a fan.";  
                 break;
             case 3:
-                document.getElementById("rate1").style.backgroundColor="peru";   
-                document.getElementById("rate2").style.backgroundColor="peru";   
-                document.getElementById("rate3").style.backgroundColor="peru";  
+                document.getElementById("rate1").style.backgroundColor="rgb(241,146,66)";   
+                document.getElementById("rate2").style.backgroundColor="rgb(241,146,66)";   
+                document.getElementById("rate3").style.backgroundColor="rgb(241,146,66)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)"; 
                 document.getElementById("rate-text").innerHTML="A-OK."; 
                 break;   
             case 2:
-                document.getElementById("rate1").style.backgroundColor="goldenrod";
-                document.getElementById("rate2").style.backgroundColor="goldenrod";  
+                document.getElementById("rate1").style.backgroundColor="rgb(244,192,19)";
+                document.getElementById("rate2").style.backgroundColor="rgb(244,192,19)";  
                 document.getElementById("rate3").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate5").style.backgroundColor="rgb(195, 195, 195)";
                 document.getElementById("rate-text").innerHTML="Meh! I've experienced better."; 
                 break;  
             case 1:
-                document.getElementById("rate1").style.backgroundColor="yellow";   
+                document.getElementById("rate1").style.backgroundColor="rgb(242,189,120)";   
                 document.getElementById("rate2").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate3").style.backgroundColor="rgb(195, 195, 195)";  
                 document.getElementById("rate4").style.backgroundColor="rgb(195, 195, 195)";  

@@ -11,6 +11,7 @@ class ReviewIndex extends React.Component {
 
             // restaurants: []
         };
+        this.deleteReview = this.deleteReview.bind(this)
         // this.render = this.render.bind(this)
         // this.componentDidMount = this.componentDidMount.bind(this)
     };
@@ -43,7 +44,13 @@ class ReviewIndex extends React.Component {
             // debugger
     }
 
-  
+    deleteReview(e) {
+        let review = {id: Number(e.currentTarget.getAttribute('value')), restaurant_id: this.props.wildcard}
+        // debugger
+        this.props.deleteReview(review);
+    }
+
+
 
     render() {
         // debugger
@@ -69,7 +76,7 @@ class ReviewIndex extends React.Component {
             this.state.stars.push(score)
         })
 
-
+        
         // debugger
 
         // debugger
@@ -88,6 +95,10 @@ class ReviewIndex extends React.Component {
                             <div className="feedback-top">
                                 <div className="user-redstar2">{this.state.stars.shift()}</div>
                                 <div className="user-date">{review.date}</div>
+                           { review.user_id === this.props.user ?
+                           <div className="delete-review" value={review.id} onClick={this.deleteReview}><i className="fa fa-close"></i></div> :
+                           <div></div> 
+                            }
                             </div>
                             <div>
                                 {review.body}
