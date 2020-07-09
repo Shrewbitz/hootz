@@ -6,9 +6,9 @@ class Map extends React.Component {
         super(props)
         this.state = {
             
-            marks: []
-           
+            marks: [],
         };
+        this.aFunction = this.aFunction.bind(this)
         // this.render = this.render.bind(this)
         // this.componentDidMount = this.componentDidMount.bind(this)
     };
@@ -42,7 +42,6 @@ class Map extends React.Component {
     }
 
     componentDidUpdate() {
-        // debugger
         if ((this.props.type != undefined) && (this.props.type === "restaurant")) {
             let coords = this.props.coords !== undefined ? this.props.coords : {x:0, y:0}
             const spot = {lat: coords.x, lng: coords.y}
@@ -58,10 +57,13 @@ class Map extends React.Component {
             
             marker.setMap(this.map)
         } else if ((this.props.type != undefined) && (this.props.type === "search")) {
+            const restaurants = []
             const coords = []
-            let length = this.props.coords.length
+            
+            let length = this.props.restaurants.length
             for (let i = 0; i < length; i++) {
-                coords.push(this.props.coords.pop())
+                restaurants.push(this.props.restaurants.pop())
+                coords[i] = restaurants[i].coordinates
             }
             // debugger
             const spot = {lat: coords[0].x, lng: coords[0].y}
@@ -72,26 +74,32 @@ class Map extends React.Component {
             this.map = new google.maps.Map(this.mapNode, mapOptions);
             
             this.state.marks.forEach(marker => {
-                debugger
                 marker.setMap(null);
             })
             
             this.state.marks = [];
-debugger    
             for (let i = 0; i < length; i++) {
                 const marker = new google.maps.Marker({
                     position: {lat: coords[i].x, lng: coords[i].y},
-                    label: `${i+1}`
+                    label: `${i+1}`,
+                    title: `${i+1}. ${restaurants[i].name}`,
+                    id: restaurants[i].id
                 });
-                debugger
+                // debugger    
                 this.state.marks.push(marker)
-                
+                marker.addListener('click', (this.aFunction) )
+                // marker.addListener('click', this.aFunction);
                 marker.setMap(this.map)
             }
             
         }
     }
 
+    aFunction(e) {
+        // debugger
+        let rid = this.state.marks[Number(e.tb.currentTarget.title[0])-1].id
+        this.props.history.push(`/restaurant/${rid}`)    
+    }
 
     render() {
         return (

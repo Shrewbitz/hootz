@@ -9,8 +9,7 @@ class RestaurantIndex extends React.Component {
         this.state = {
             stars: [],
             about: [],
-            coords: []
-            // restaurants: []
+            restaurants: []
         };
         // this.render = this.render.bind(this)
         // this.componentDidMount = this.componentDidMount.bind(this)
@@ -41,7 +40,7 @@ class RestaurantIndex extends React.Component {
         })
 
         Object.values(restaurants).reverse().map((restaurant) => {
-            this.state.coords.push(restaurant.coordinates)
+            this.state.restaurants.push(restaurant)
             // rid = restaurant.id
             // this.state.coords.push({rid: restaurant.coordinates})
             let about = restaurant.about
@@ -98,7 +97,7 @@ class RestaurantIndex extends React.Component {
                     }
                 </div>
                 <div className="map">
-                    <Map coords={this.state.coords} type="search"></Map>
+                    <Map history={this.props.history} restaurants={this.state.restaurants} type="search"></Map>
                 </div>
             </div>
         )
