@@ -142,7 +142,7 @@
 
 .r-location-wrapper {
     display: flex;
-    width: 400px;
+    width: 330px;
     margin-top: 20px;
 }
 
@@ -235,7 +235,24 @@
     text-decoration: underline;
 }
 
+.rlh {
+    display: flex;
+}
 
+.r-hours {
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 5px; 
+    margin-left: 20px;
+}
+
+.r-hours div {
+    margin-bottom: 5px; 
+}
+
+.r-bold {
+    font-weight: bold;
+}
 /* email */
 .r-dropdown {
     position: relative;

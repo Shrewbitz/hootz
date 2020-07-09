@@ -14,9 +14,10 @@
 }
 
 .map {
-    width: 400px;
+    width: 25%;
     position: fixed;
-    top: 110px;
+    top: 133px;
     right: 0px;
+    /* height: 555px; */
     height: 80%;
 }

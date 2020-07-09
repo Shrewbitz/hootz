@@ -107,11 +107,35 @@ class Restaurant extends React.Component {
                         </div>
                         <div className="r-breakline"></div>
                         <div className="r-section-label">Location {"&"} Hours</div>
-                        <Map coords={this.state.restaurant.coordinates} type="restaurant"></Map>
-                        <div className="r-location-wrapper">
-                            <div className="r-location">{this.state.restaurant.address}</div>
-                            <a target="blank" href={"https://www.google.com/maps/search/"+this.state.restaurant.name+" "+this.state.restaurant.address}  className="r-sticky-label">Get directions</a>
+                        <div className="rlh">
+
+                            <div>
+                                <Map coords={this.state.restaurant.coordinates} type="restaurant"></Map>
+                                <div className="r-location-wrapper">
+                                    <div className="r-location">{this.state.restaurant.address}</div>
+                                    <a target="blank" href={"https://www.google.com/maps/search/"+this.state.restaurant.name+" "+this.state.restaurant.address}  className="r-sticky-label">Get directions</a>
+                                </div>
+                            </div>
+                            <div className="r-hours">
+                                <div className="r-bold" > Mon  </div>
+                                <div className="r-bold"> Tue </div>
+                                <div className="r-bold"> Wed </div>
+                                <div className="r-bold"> Thu </div>
+                                <div className="r-bold"> Fri </div>
+                                <div className="r-bold"> Sat </div>
+                                 <div className="r-bold"> Sun </div>
+                            </div>
+                            <div className="r-hours">
+                                <div> 7:00 pm - 10:00 pm </div>
+                                <div> 7:00 pm - 10:00 pm </div>
+                                <div> 7:00 pm - 10:00 pm</div>
+                                <div> 7:00 pm - 10:00 pm</div>
+                                <div> 7:00 pm - 11:00 pm</div>
+                                <div> 9:00 pm - 11:00 pm </div>
+                                <div> Closed </div>
+                            </div>
                         </div>
+
                         <div className="r-breakline"></div>
                         <div className="r-section-label">About</div>
                         <div className="r-about">{this.state.restaurant.about}</div>
