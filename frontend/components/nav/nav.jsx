@@ -15,6 +15,7 @@ class Nav extends React.Component {
         this.findNoodles = this.findNoodles.bind(this)
         this.findBurgers = this.findBurgers.bind(this)
         this.findPizza = this.findPizza.bind(this)
+        this.searchAll = this.searchAll.bind(this)
     };
 
     
@@ -50,6 +51,13 @@ class Nav extends React.Component {
             this.props.history.push('/search')}) 
     }
 
+    searchAll () {
+        window.scrollTo(0, 0);
+        this.props.searchRestaurants({search1: "shrewbitz", search2: ""}).then (() => {
+            this.props.history.push('/search')}) 
+    }
+
+
     render() {
        const {currentUser, logout} = this.props  
         
@@ -77,7 +85,7 @@ class Nav extends React.Component {
                 <div className="nav-top">
                     <div className="nav-bar-upper">
                         <div className="nav-buffer">
-                            <div className="nav-bar-upleft">
+                            <div className="nav-bar-upleft" onClick={this.searchAll}>
                                 Write a review
                             </div>
                         </div>

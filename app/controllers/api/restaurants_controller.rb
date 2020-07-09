@@ -14,6 +14,7 @@ class Api::RestaurantsController < ApplicationController
         search1 = split_search[0]
         search2 = split_search[1]
         @restaurants = []
+      
         if  search1 != "" && search2 != nil
             @restaurants = Restaurant.where(["lower(name) LIKE ?", "%#{search1.downcase}%"]).where(["lower(address) LIKE ?", "%#{search2.downcase}%"])  
         elsif search1 != "" && search1 != nil 
@@ -31,7 +32,12 @@ class Api::RestaurantsController < ApplicationController
         end
         if search2 != nil && @restaurants.length == 0
             @restaurants = Restaurant.where(["lower(address) LIKE ?", "%#{search2.downcase}%"])
-        end    
+        end   
+        
+        if search1 == "shrewbitz"
+            @restaurants = Restaurant.all
+        end
+        
         render :index
     end
 

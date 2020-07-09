@@ -15,6 +15,13 @@ export default ({currentUser, logout})=> {
         </div>
     );
 
+    // searchAll () {
+    //     window.scrollTo(0, 0);
+    //     this.props.searchRestaurants({search1: "shrewbitz", search2: ""}).then (() => {
+    //         this.props.history.push('/search')}) 
+    // }
+    
+
     return (
         <div>
         {/* <div>{this.state.restaurant.name}</div> */}
@@ -36,7 +43,7 @@ export default ({currentUser, logout})=> {
                     </div>
                 </div>
                     <div className="restaurant-right-container">
-                        <div className="restaurant-top-link">Write a Review</div>
+                        {/* <div onClick={thisearchAll} className="restaurant-top-link">Write a Review</div> */}
                         <div className="restaurant-signup-login">{display}</div>
                     </div>
             </div>

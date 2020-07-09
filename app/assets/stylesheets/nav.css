@@ -56,7 +56,7 @@
 
 .nav-bar-upleft:hover {
     /* text-decoration: underline; */
-    
+    cursor: pointer;
     border-bottom: solid white 2px;
     
     /* padding-left: 12px; */
