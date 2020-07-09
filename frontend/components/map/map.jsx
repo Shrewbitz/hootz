@@ -37,8 +37,12 @@ class Map extends React.Component {
     //         <div id="map">hello</div>
     //     )
     // }
+    componentDidMount() {
+        this.componentDidUpdate()
+    }
 
     componentDidUpdate() {
+        // debugger
         if ((this.props.type != undefined) && (this.props.type === "restaurant")) {
             let coords = this.props.coords !== undefined ? this.props.coords : {x:0, y:0}
             const spot = {lat: coords.x, lng: coords.y}
@@ -54,11 +58,12 @@ class Map extends React.Component {
             
             marker.setMap(this.map)
         } else if ((this.props.type != undefined) && (this.props.type === "search")) {
-
-            let coords = []
-            for (let i = 0; i < this.props.coords.length - 1; i++) {
+            const coords = []
+            let length = this.props.coords.length
+            for (let i = 0; i < length; i++) {
                 coords.push(this.props.coords.pop())
             }
+            // debugger
             const spot = {lat: coords[0].x, lng: coords[0].y}
             const mapOptions = {
                 center: spot,
@@ -72,12 +77,13 @@ class Map extends React.Component {
             })
             
             this.state.marks = [];
-
-            for (let i = 0; i < coords.length - 1; i++) {
+debugger    
+            for (let i = 0; i < length; i++) {
                 const marker = new google.maps.Marker({
                     position: {lat: coords[i].x, lng: coords[i].y},
                     label: `${i+1}`
                 });
+                debugger
                 this.state.marks.push(marker)
                 
                 marker.setMap(this.map)
