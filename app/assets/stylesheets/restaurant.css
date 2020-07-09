@@ -132,10 +132,41 @@
 }
 
 .r-location {
-    width: 605px;
+    /* margin-top: 20px; */
+    font-weight: 700;
+    width: 183px;
     font-size: 14px;
     color: #333;
     line-height: 1.28571em;
+}
+
+.r-location-wrapper {
+    display: flex;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.r-location-wrapper a {
+    width: 88px;
+    margin-left: 20px;
+    color: #333;
+    font-weight: 600;
+    font-size: 12px;
+    border: solid 1px #bbbac0;
+    height: 18px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border-radius: 3px;
+    transition: ease .6s background-color;
+    background-color: white;
+    
+}
+
+.r-location-wrapper a:hover {
+    transition: ease .4s background-color;
+    background-color: #e6e6e6;
+    text-decoration: none;
+
 }
 
 .r-reviews {

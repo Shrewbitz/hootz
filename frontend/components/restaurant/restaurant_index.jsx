@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Map from '../map/map'
 
 class RestaurantIndex extends React.Component {
 
@@ -7,7 +8,8 @@ class RestaurantIndex extends React.Component {
         super(props)
         this.state = {
             stars: [],
-            about: []
+            about: [],
+            coords: []
             // restaurants: []
         };
         // this.render = this.render.bind(this)
@@ -39,6 +41,9 @@ class RestaurantIndex extends React.Component {
         })
 
         Object.values(restaurants).reverse().map((restaurant) => {
+            this.state.coords.push(restaurant.coordinates)
+            // rid = restaurant.id
+            // this.state.coords.push({rid: restaurant.coordinates})
             let about = restaurant.about
             if (about === "none") {
                 this.state.about.push("")
@@ -51,45 +56,50 @@ class RestaurantIndex extends React.Component {
         // this.state.restaurant.photos
         // debugger
         return (
-            <div className="ri-container">
-                {
-                    Object.values(restaurants).map((restaurant, idx) =>
-                    (<Link key={idx} className="link" to={`/restaurant/${restaurant.id}`}>
-                        <div className="thumbnail-container">
-                            <img className="thumbnail"  src={restaurant.photos[0]}/>
-                        </div>
-                        <div>
-                            <div className="ri-top">
-                                <div className="ri-top-container">
-                                    <div>{restaurant.name}</div>
-                                    <div className="ri-line1">
-                                        <div className="ri-stars"> {this.state.stars.shift()}</div>
-                                        <div className="ri-count" >{restaurant.review_count}</div>
+            <div>
+                <div className="ri-container">
+                    {
+                        Object.values(restaurants).map((restaurant, idx) =>
+                        (<Link key={idx} className="link" to={`/restaurant/${restaurant.id}`}>
+                            <div className="thumbnail-container">
+                                <img className="thumbnail"  src={restaurant.photos[0]}/>
+                            </div>
+                            <div>
+                                <div className="ri-top">
+                                    <div className="ri-top-container">
+                    <div>{idx+1}. {restaurant.name}</div>
+                                        <div className="ri-line1">
+                                            <div className="ri-stars"> {this.state.stars.shift()}</div>
+                                            <div className="ri-count" >{restaurant.review_count}</div>
+                                        </div>
+                                    </div>
+                                    <div className="ri-top-right">
+                                        <div>{restaurant.phone}</div>
+                                        <div>{restaurant.address}</div>
                                     </div>
                                 </div>
-                                <div className="ri-top-right">
-                                    <div>{restaurant.phone}</div>
-                                    <div>{restaurant.address}</div>
+                                
+                                <div className="ri-line2">
+                                    <div>{restaurant.cost}</div>
+                                    <div className="ri-tags"> 
+                                            {restaurant.tags.slice(restaurant.tags.length - 2, restaurant.tags.length - 1).map((tag, idx) => {
+                                                return (<div  key={idx} >{tag.tag},&nbsp; </div>);
+                                            })}
+                                            {restaurant.tags.slice(restaurant.tags.length - 1).map((tag, idx) => {
+                                                return (<div key={idx} >{tag.tag} </div>);
+                                            })}
+                                    </div>
                                 </div>
+                                <div className="ri-about" >{this.state.about.pop()}</div>
+                                
                             </div>
                             
-                            <div className="ri-line2">
-                                <div>{restaurant.cost}</div>
-                                <div className="ri-tags"> 
-                                        {restaurant.tags.slice(restaurant.tags.length - 2, restaurant.tags.length - 1).map((tag, idx) => {
-                                            return (<div  key={idx} >{tag.tag},&nbsp; </div>);
-                                        })}
-                                        {restaurant.tags.slice(restaurant.tags.length - 1).map((tag, idx) => {
-                                            return (<div key={idx} >{tag.tag} </div>);
-                                        })}
-                                </div>
-                            </div>
-                            <div className="ri-about" >{this.state.about.pop()}</div>
-                            
-                        </div>
-                         
-                    </Link>))
-                }
+                        </Link>))
+                    }
+                </div>
+                <div className="map">
+                    <Map coords={this.state.coords} type="search"></Map>
+                </div>
             </div>
         )
     }

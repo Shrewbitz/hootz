@@ -9,6 +9,7 @@ div {
     background-color: white;
     display: flex;
     flex-direction: row;
+    position: fixed;
 }
 
 .restaurant-top-container {

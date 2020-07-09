@@ -77,8 +77,6 @@ class ReviewIndex extends React.Component {
 
         
         // debugger
-
-        // debugger
         return (
             <div className="empty-placeholder">
                 {

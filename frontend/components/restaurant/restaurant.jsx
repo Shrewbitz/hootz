@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewIndex from '../review/review_index_container'
 import WriteReview from '../review/write_review_container'
+import Map from '../map/map'
 
 class Restaurant extends React.Component {
     constructor(props) {
@@ -17,12 +18,13 @@ class Restaurant extends React.Component {
         this.props.fetchRestaurant(this.props.match.params.restaurantId).then(restaurant => {
             this.setState({restaurant: restaurant.restaurant})
         });
+        document.getElementById("restaurant-head") ? document.getElementById("restaurant-head").style.position = "relative" : 0
     }
-
-
-
+    
+    
+    
+    
     render() {
-        // debugger
         const claimed = this.state.restaurant.id ? <div className="r-claimed"><i className="fas fa-check-circle "></i><div className="r-claim-text">Claimed</div></div>  : ""
 
         const rating = this.state.restaurant.review_avg;
@@ -105,7 +107,11 @@ class Restaurant extends React.Component {
                         </div>
                         <div className="r-breakline"></div>
                         <div className="r-section-label">Location {"&"} Hours</div>
-                        <div className="r-location">{this.state.restaurant.address}</div>
+                        <Map coords={this.state.restaurant.coordinates} type="restaurant"></Map>
+                        <div className="r-location-wrapper">
+                            <div className="r-location">{this.state.restaurant.address}</div>
+                            <a target="blank" href={"https://www.google.com/maps/search/"+this.state.restaurant.name+" "+this.state.restaurant.address}  className="r-sticky-label">Get directions</a>
+                        </div>
                         <div className="r-breakline"></div>
                         <div className="r-section-label">About</div>
                         <div className="r-about">{this.state.restaurant.about}</div>

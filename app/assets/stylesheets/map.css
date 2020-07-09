@@ -1,0 +1,22 @@
+#map {
+    /* width: 100%;  The width is the width of the web page */
+    
+}
+
+.map #map {
+    width: 100%;
+    height: 112.5%; 
+}
+
+.r-vertical #map {
+    height: 150px;
+    width: 315px;
+}
+
+.map {
+    width: 400px;
+    position: fixed;
+    top: 110px;
+    right: 0px;
+    height: 80%;
+}

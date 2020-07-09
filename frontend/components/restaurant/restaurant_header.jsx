@@ -19,7 +19,7 @@ export default ({currentUser, logout})=> {
         <div>
         {/* <div>{this.state.restaurant.name}</div> */}
 
-        <div className="restaurant-head-container">
+        <div id="restaurant-head" className="restaurant-head-container">
             <div className="restaurant-top-container">
                 <div className="restaurant-left-margin">
                     <Link className="restaurant-logo-container" to="/"><img className="restaurant-logo" src={window.hootz}/></Link>
