@@ -1,7 +1,7 @@
 .ri-container {
     /* height: 1000px; */
     padding-top: 133px;
-    width: 70%;
+    width: 75%;
     border-top: solid 1px #eeeeef;
     min-height: 600px;
     
@@ -65,7 +65,7 @@
 }
 
 .ri-info {
-    width: 100%;
+    width: calc(100% - 150px);
 } 
 
 .ri-top-right {
