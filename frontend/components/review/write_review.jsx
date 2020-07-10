@@ -24,6 +24,7 @@ class WriteReview extends React.Component {
     };
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchRestaurant(this.props.match.params.restaurantId).then(restaurant => {
             this.setState({restaurant: restaurant.restaurant})
         });
