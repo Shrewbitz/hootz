@@ -1,12 +1,11 @@
 # Hootz
 
+Hootz is a Yelp clone. Yelp is such a large site now that I have decided to focus on the core functionality of reviewing restaurants. Users will be able to sign up, find, and review restaurants. 
+
 ![](hootz2.gif)
 
 [Live Site](http://hootz.herokuapp.com/)
 
-# Background
-
-Hootz is a Yelp clone. Yelp is such a large site now that I have decided to focus on the core functionality of reviewing restaurants. Users will be able to sign up, find, and review restaurants. 
 
 # Functionality & MVP
 
