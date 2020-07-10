@@ -2,7 +2,7 @@
 
 ![](hootz2.gif)
 
-[Live Site](http://www.hootz.herokuapp.com)
+[Live Site](http://hootz.herokuapp.com/)
 
 # Background
 
